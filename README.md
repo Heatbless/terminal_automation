@@ -6,7 +6,16 @@ A full-stack automation system with QR code registration, scanning, and MQTT-bas
 
 ### Windows
 - [Docker Desktop for Windows](https://www.docker.com/products/docker-desktop/)
+  - **Important**: Docker Desktop must be configured to run **Linux containers** (uses WSL2 backend by default)
+  - To verify your Docker mode, run:
+    ```bash
+    docker info --format '{{.OSType}}'
+    ```
+    - Should output `linux` (correct) — not `windows`
+  - If output is `windows`, right-click Docker Desktop system tray icon → "Switch to Linux containers"
 - [Git for Windows](https://git-scm.com/download/win)
+
+> **Note**: The Dockerfile uses Linux base images (`node:20-alpine`, `nginx:alpine`). Docker Desktop with WSL2 backend handles this automatically. If you cannot use WSL2, Docker Desktop will use Hyper-V to run Linux containers.
 
 ### Linux
 - Docker Engine and Docker Compose
