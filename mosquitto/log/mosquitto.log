@@ -1,0 +1,12 @@
+1764665132: mosquitto version 2.0.22 starting
+1764665132: Config loaded from /mosquitto/config/mosquitto.conf.
+1764665132: Opening ipv4 listen socket on port 1883.
+1764665132: Opening ipv6 listen socket on port 1883.
+1764665132: mosquitto version 2.0.22 running
+1764666375: New connection from 172.20.0.1:40820 on port 1883.
+1764666375: New client connected from 172.20.0.1:40820 as auto-8DD40EF1-6378-A772-E868-6FDB51E58CCC (p2, c1, k60).
+1764666403: New connection from 172.20.0.1:51450 on port 1883.
+1764666403: New client connected from 172.20.0.1:51450 as auto-A832A2BC-9E7F-32E7-FC9C-DFBACF77D82C (p2, c1, k60).
+1764666403: Client auto-A832A2BC-9E7F-32E7-FC9C-DFBACF77D82C disconnected.
+1764666497: mosquitto version 2.0.22 terminating
+1764666497: Saving in-memory database to /mosquitto/data/mosquitto.db.

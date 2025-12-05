@@ -1,0 +1,1003 @@
+2025-11-30 13:39:21,898 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.3.Final
+2025-11-30 13:39:22,168 [main] INFO  o.t.s.ThingsboardServerApplication - Starting ThingsboardServerApplication v4.2.1 using Java 17.0.16 with PID 22 (/usr/share/thingsboard/bin/thingsboard.jar started by thingsboard in /)
+2025-11-30 13:39:22,172 [main] INFO  o.t.s.ThingsboardServerApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-30 13:39:22,931 [main] WARN  o.s.c.a.AnnotationTypeMapping - Support for convention-based annotation attribute overrides is deprecated and will be removed in Spring Framework 7.0. Please annotate the following attributes in @org.thingsboard.server.config.annotations.ApiOperation with appropriate @AliasFor declarations: [hidden, requestBody, responses]
+2025-11-30 13:39:29,813 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-30 13:39:29,814 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in LAZY mode.
+2025-11-30 13:39:30,186 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 347 ms. Found 7 JPA repository interfaces.
+2025-11-30 13:39:30,192 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-30 13:39:30,192 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in LAZY mode.
+2025-11-30 13:39:30,631 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 435 ms. Found 57 JPA repository interfaces.
+2025-11-30 13:39:30,637 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-30 13:39:30,638 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in LAZY mode.
+2025-11-30 13:39:30,659 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 1 JPA repository interface.
+2025-11-30 13:39:30,661 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-30 13:39:30,661 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in LAZY mode.
+2025-11-30 13:39:30,677 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 1 JPA repository interface.
+2025-11-30 13:39:32,506 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2025-11-30 13:39:32,541 [main] INFO  o.s.i.c.DefaultConfiguringBeanFactoryPostProcessor - No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2025-11-30 13:39:34,935 [main] INFO  o.t.s.q.d.DefaultTbServiceInfoProvider - Current Service ID: e59ed201857d
+2025-11-30 13:39:37,276 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-30 13:39:37,738 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.29.Final
+2025-11-30 13:39:37,868 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-30 13:39:38,219 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-30 13:39:38,560 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@46c22d8e
+2025-11-30 13:39:38,567 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-30 13:39:38,738 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 12.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-30 13:39:39,654 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-30 13:39:46,352 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-30 13:39:46,375 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-30 13:39:47,461 [main] INFO  o.s.d.j.r.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-11-30 13:39:53,852 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 9090 (http)
+2025-11-30 13:39:53,881 [main] INFO  o.a.coyote.http11.Http11NioProtocol - The ["http-nio-0.0.0.0-9090"] connector has been configured to support HTTP upgrade to [h2c]
+2025-11-30 13:39:53,882 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-9090"]
+2025-11-30 13:39:53,887 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-30 13:39:53,888 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-11-30 13:39:54,027 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-30 13:39:54,028 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 31749 ms
+2025-11-30 13:39:54,517 [main] INFO  o.t.s.d.a.CachedAttributesService - Going to use directExecutor for the local cache type caffeine
+2025-11-30 13:39:56,109 [main] INFO  o.t.s.s.a.DefaultTbApiUsageStateService - Starting api usage service.
+2025-11-30 13:39:56,121 [main] INFO  o.t.s.s.a.DefaultTbApiUsageStateService - Started api usage service.
+2025-11-30 13:39:59,526 [main] INFO  o.t.s.t.h.config.PayloadSizeFilter - Initialized payload size filter with configuration: /api/image*/**=52428800;/api/resource/**=52428800;/api/**=16777216
+2025-11-30 13:39:59,627 [main] INFO  o.t.s.t.h.config.PayloadSizeFilter - Initialized payload size filter with configuration: /api/v1/*/rpc/**=65536;/api/v1/**=52428800
+2025-11-30 13:39:59,824 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: zookeeper.version=3.9.3-c26634f34490bb0ea7a09cc51e05ede3b4e320ee, built on 2024-10-17 23:21 UTC
+2025-11-30 13:39:59,824 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: host.name=e59ed201857d
+2025-11-30 13:39:59,824 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: java.version=17.0.16
+2025-11-30 13:39:59,824 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: java.vendor=Debian
+2025-11-30 13:39:59,824 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: java.home=/usr/lib/jvm/java-17-openjdk-amd64
+2025-11-30 13:39:59,825 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: java.class.path=/usr/share/thingsboard/bin/thingsboard.jar
+2025-11-30 13:39:59,825 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: java.library.path=/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+2025-11-30 13:39:59,825 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: java.io.tmpdir=/tmp
+2025-11-30 13:39:59,825 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: java.compiler=<NA>
+2025-11-30 13:39:59,825 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: os.name=Linux
+2025-11-30 13:39:59,825 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: os.arch=amd64
+2025-11-30 13:39:59,825 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: os.version=6.6.87.2-microsoft-standard-WSL2
+2025-11-30 13:39:59,825 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: user.name=thingsboard
+2025-11-30 13:39:59,825 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: user.home=/home/thingsboard
+2025-11-30 13:39:59,825 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: user.dir=/
+2025-11-30 13:39:59,826 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: os.memory.free=224MB
+2025-11-30 13:39:59,826 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: os.memory.max=1898MB
+2025-11-30 13:39:59,826 [main] INFO  o.t.s.q.e.EnvironmentLogService - ThingsBoard server environment: os.memory.total=494MB
+2025-11-30 13:40:00,150 [main] INFO  d.n.internal.NashornDetection - Delight-nashorn-sandbox detected that JDK Nashorn is absent and standalone Nashorn is present, and will use Standalone Nashorn
+2025-11-30 13:40:02,464 [main] INFO  o.t.s.a.service.DefaultActorService - Initializing actor system.
+2025-11-30 13:40:02,483 [main] INFO  o.t.s.a.service.DefaultActorService - Actor system initialized.
+2025-11-30 13:40:04,109 [main] INFO  o.t.s.c.t.c.ssl.SslCredentialsConfig - LWM2M Server DTLS Credentials: Skipping initialization of disabled SSL credentials.
+2025-11-30 13:40:04,125 [main] INFO  o.t.s.c.t.c.ssl.SslCredentialsConfig - LWM2M Trust Credentials: Skipping initialization of disabled SSL credentials.
+2025-11-30 13:40:04,160 [main] INFO  o.t.s.c.t.c.ssl.SslCredentialsConfig - LWM2M Bootstrap DTLS Credentials: Skipping initialization of disabled SSL credentials.
+2025-11-30 13:40:04,746 [main] INFO  o.t.s.c.SystemInfoController - System build info: {"version":"4.2.1","artifact":"application","name":"ThingsBoard Server Application","type":"CE"}
+2025-11-30 13:40:05,840 [main] INFO  o.t.s.c.adaptor.JsonConverterConfig - JSON max string value length = 0
+2025-11-30 13:40:05,841 [main] INFO  o.t.s.c.adaptor.JsonConverterConfig - JSON type cast enabled = true
+2025-11-30 13:40:06,005 [main] INFO  o.t.s.t.mqtt.MqttTransportService - Setting resource leak detector level to DISABLED
+2025-11-30 13:40:06,005 [main] INFO  o.t.s.t.mqtt.MqttTransportService - Starting MQTT transport...
+2025-11-30 13:40:06,151 [main] INFO  o.t.s.t.mqtt.MqttTransportService - Mqtt transport started!
+2025-11-30 13:40:06,272 [main] INFO  o.e.c.elements.config.Configuration - defaults added COAP.
+2025-11-30 13:40:06,302 [main] INFO  o.e.c.elements.config.Configuration - defaults added UDP.
+2025-11-30 13:40:06,304 [main] INFO  o.e.c.c.network.RandomTokenGenerator - using tokens of 8 bytes in length
+2025-11-30 13:40:06,353 [main] INFO  org.eclipse.californium.ban - Started.
+2025-11-30 13:40:06,357 [main] INFO  o.e.c.core.network.CoapEndpoint - coap CoapEndpoint uses udp context
+2025-11-30 13:40:06,377 [main] INFO  o.e.c.elements.config.Configuration - defaults added SYS.
+2025-11-30 13:40:06,378 [main] INFO  o.e.c.c.network.stack.BlockwiseLayer - coap BlockwiseLayer uses MAX_MESSAGE_SIZE=1024, PREFERRED_BLOCK_SIZE=1024, BLOCKWISE_STATUS_LIFETIME=300000, MAX_RESOURCE_BODY_SIZE=268435456, BLOCKWISE_STRICT_BLOCK2_OPTION=true
+2025-11-30 13:40:06,400 [main] INFO  o.e.californium.core.CoapServer - Starting server
+2025-11-30 13:40:06,424 [main] INFO  o.e.c.elements.UDPConnector - UDPConnector starts up 1 sender threads and 1 receiver threads
+2025-11-30 13:40:06,432 [main] INFO  o.e.c.elements.UDPConnector - UDPConnector listening on /[0:0:0:0:0:0:0:0]:5683, recv buf = 106496, send buf = 106496, recv packet size = 2048
+2025-11-30 13:40:06,434 [main] INFO  o.e.c.core.network.CoapEndpoint - coap Started endpoint at coap://[0:0:0:0:0:0:0:0]:5683
+2025-11-30 13:40:06,440 [main] INFO  o.t.s.t.coap.CoapTransportService - Starting CoAP transport...
+2025-11-30 13:40:06,453 [main] INFO  o.t.s.t.coap.CoapTransportService - CoAP transport started!
+2025-11-30 13:40:06,550 [main] INFO  o.t.s.t.l.b.LwM2MTransportBootstrapService - Starting LwM2M transport bootstrap server...
+2025-11-30 13:40:06,586 [main] INFO  o.e.c.elements.util.JceProviderUtil - JCE default setup
+2025-11-30 13:40:06,615 [main] INFO  o.e.c.elements.util.JceProviderUtil - RSA: true, EC: true, AES: not restricted
+2025-11-30 13:40:06,630 [main] INFO  o.e.c.elements.util.JceProviderUtil - EdDSA supported by SunEC, Ed25519: true, Ed448: true
+2025-11-30 13:40:06,631 [main] INFO  o.e.c.elements.util.JceProviderUtil - JCE setup: SunEC version 17, ready.
+2025-11-30 13:40:06,698 [main] INFO  o.e.c.elements.config.Configuration - defaults added DTLS.
+2025-11-30 13:40:07,076 [main] WARN  o.e.l.s.b.LeshanBootstrapServerBuilder - configStore is set but you also provide a custom SessionManager so this store will not be used
+2025-11-30 13:40:07,089 [main] INFO  o.e.c.c.network.RandomTokenGenerator - using tokens of 8 bytes in length
+2025-11-30 13:40:07,089 [main] INFO  o.e.c.core.network.CoapEndpoint - [Bootstrap Server-coap://0.0.0.0:5687] CoapEndpoint uses udp context
+2025-11-30 13:40:07,090 [main] INFO  o.e.c.c.network.stack.BlockwiseLayer - [Bootstrap Server-coap://0.0.0.0:5687] BlockwiseLayer uses MAX_MESSAGE_SIZE=1024, PREFERRED_BLOCK_SIZE=1024, BLOCKWISE_STATUS_LIFETIME=300000, MAX_RESOURCE_BODY_SIZE=268435456, BLOCKWISE_STRICT_BLOCK2_OPTION=true
+2025-11-30 13:40:07,103 [main] INFO  o.t.s.t.l.b.LwM2MTransportBootstrapService - Unable to load X509 files for LWM2MServer
+2025-11-30 13:40:07,107 [main] WARN  o.e.l.s.c.b.e.c.CoapsBootstrapServerEndpointFactory - PskStore should be automatically set by Leshan. Using a custom implementation is not advised.
+2025-11-30 13:40:07,152 [main] INFO  o.e.c.s.d.InMemoryReadWriteLockConnectionStore - Created new InMemoryConnectionStore [capacity: 150000, connection expiration threshold: 1800s]
+2025-11-30 13:40:07,159 [main] INFO  o.e.c.c.network.RandomTokenGenerator - using tokens of 8 bytes in length
+2025-11-30 13:40:07,159 [main] INFO  o.e.c.core.network.CoapEndpoint - [Bootstrap Server-coaps://0.0.0.0:5688] CoapEndpoint uses lwm2m correlation
+2025-11-30 13:40:07,160 [main] INFO  o.e.c.c.network.stack.BlockwiseLayer - [Bootstrap Server-coaps://0.0.0.0:5688] BlockwiseLayer uses MAX_MESSAGE_SIZE=1024, PREFERRED_BLOCK_SIZE=1024, BLOCKWISE_STATUS_LIFETIME=300000, MAX_RESOURCE_BODY_SIZE=268435456, BLOCKWISE_STRICT_BLOCK2_OPTION=true
+2025-11-30 13:40:07,166 [main] INFO  o.e.californium.core.CoapServer - Starting server
+2025-11-30 13:40:07,172 [main] INFO  o.e.c.elements.UDPConnector - UDPConnector starts up 2 sender threads and 2 receiver threads
+2025-11-30 13:40:07,177 [main] INFO  o.e.c.elements.UDPConnector - UDPConnector listening on /[0:0:0:0:0:0:0:0]:5687, recv buf = 106496, send buf = 106496, recv packet size = 2048
+2025-11-30 13:40:07,178 [main] INFO  o.e.c.core.network.CoapEndpoint - [Bootstrap Server-coap://0.0.0.0:5687] Started endpoint at coap://[0:0:0:0:0:0:0:0]:5687
+2025-11-30 13:40:07,186 [main] INFO  o.e.c.scandium.DTLSConnector - multiple network interfaces, using smallest MTU [IPv4 1500, IPv6 1280]
+2025-11-30 13:40:07,191 [DTLS-Receiver-0-/[0:0:0:0:0:0:0:0]:5688] INFO  o.e.c.scandium.DTLSConnector - Starting worker thread [DTLS-Receiver-0-/[0:0:0:0:0:0:0:0]:5688]
+2025-11-30 13:40:07,192 [main] INFO  o.e.c.scandium.DTLSConnector - DTLSConnector listening on /[0:0:0:0:0:0:0:0]:5688, recv buf = 106496, send buf = 106496, recv packet size = 16490, MTU = IPv4 1500 / IPv6 1280
+2025-11-30 13:40:07,192 [DTLS-Receiver-1-/[0:0:0:0:0:0:0:0]:5688] INFO  o.e.c.scandium.DTLSConnector - Starting worker thread [DTLS-Receiver-1-/[0:0:0:0:0:0:0:0]:5688]
+2025-11-30 13:40:07,193 [main] INFO  o.e.c.core.network.CoapEndpoint - [Bootstrap Server-coaps://0.0.0.0:5688] Started endpoint at coaps://[0:0:0:0:0:0:0:0]:5688
+2025-11-30 13:40:07,193 [main] INFO  o.e.l.s.b.LeshanBootstrapServer - Bootstrap server started.
+2025-11-30 13:40:07,194 [main] INFO  o.e.l.s.b.LeshanBootstrapServer - CoAP over UDP endpoint based on Californium library available at coap://[0:0:0:0:0:0:0:0]:5687.
+2025-11-30 13:40:07,194 [main] INFO  o.e.l.s.b.LeshanBootstrapServer - CoAP over DTLS endpoint based on Californium/Scandium library available at coaps://[0:0:0:0:0:0:0:0]:5688.
+2025-11-30 13:40:07,194 [main] INFO  o.t.s.t.l.b.LwM2MTransportBootstrapService - Started LwM2M transport bootstrap server.
+2025-11-30 13:40:07,561 [main] INFO  o.t.s.t.s.s.SnmpTransportService - SNMP transport service initialized
+2025-11-30 13:40:07,595 [main] INFO  o.t.s.d.s.NamedParameterJdbcTemplateConfiguration - Set jdbcTemplate query timeout [30] second(s)
+2025-11-30 13:40:08,307 [main] INFO  o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Found 3 AuthenticationProvider beans, with names [jwtAuthenticationProvider, refreshTokenAuthenticationProvider, restAuthenticationProvider]. Global Authentication Manager will not be configured with AuthenticationProviders. Consider publishing a single AuthenticationProvider bean, or wiring your Providers directly using the DSL.
+2025-11-30 13:40:08,694 [main] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [public/index.html]
+2025-11-30 13:40:09,856 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2025-11-30 13:40:12,455 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'relations' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,459 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'deviceCredentials' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,460 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'devices' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,461 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'sessions' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,462 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'assets' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,463 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'customers' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,463 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'users' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,463 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'entityViews' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,464 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'claimDevices' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,465 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'securitySettings' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,465 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'tenantProfiles' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,466 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'tenants' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,466 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'tenantsExist' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,466 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'deviceProfiles' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,466 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'assetProfiles' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,467 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'notificationSettings' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,467 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'sentNotifications' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,467 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'attributes' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,468 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'tsLatest' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,468 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'userSessionsInvalidation' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,468 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'otaPackages' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,469 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'otaPackagesData' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,469 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'edges' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,469 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'edgeSessions' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,470 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'relatedEdges' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,470 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'repositorySettings' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,470 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'autoCommitSettings' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,471 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'twoFaVerificationCodes' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,471 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'versionControlTask' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,471 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'userSettings' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,472 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'dashboardTitles' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,472 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'entityCount' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,472 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'resourceInfo' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,472 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'alarmTypes' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,473 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'qrCodeSettings' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,473 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'mobileSecretKey' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,473 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'trendzSettings' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:12,474 [main] WARN  i.m.c.i.b.cache.CaffeineCacheMetrics - The cache 'aiModel' is not recording statistics. No meters except 'cache.size' will be registered. Call 'Caffeine#recordStats()' prior to building the cache for metrics to be recorded.
+2025-11-30 13:40:13,359 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2025-11-30 13:40:13,360 [main] INFO  o.s.i.c.PublishSubscribeChannel - Channel 'application.errorChannel' has 1 subscriber(s).
+2025-11-30 13:40:13,360 [main] INFO  o.s.i.endpoint.EventDrivenConsumer - started bean '_org.springframework.integration.errorLogger'
+2025-11-30 13:40:13,395 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-9090"]
+2025-11-30 13:40:13,435 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 9090 (http) with context path '/'
+2025-11-30 13:40:13,504 [main] INFO  o.t.s.ThingsboardServerApplication - Started ThingsboardServerApplication in 52.792 seconds (process running for 56.842)
+2025-11-30 13:40:13,509 [TB-Scheduling-2] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 13:40:13,534 [main] INFO  o.t.s.q.c.c.QueueConsumerManager - [TB Version Control] Launching consumer
+2025-11-30 13:40:13,536 [main] INFO  o.t.s.q.d.HashPartitionService - Recalculating partitions
+2025-11-30 13:40:13,536 [main] INFO  o.t.s.q.d.HashPartitionService - [e59ed201857d] Found common server: [TB_CORE, TB_RULE_ENGINE, TB_TRANSPORT, JS_EXECUTOR, TB_VC_EXECUTOR, EDQS, TASK_PROCESSOR]
+2025-11-30 13:40:13,558 [main] INFO  o.t.s.q.d.HashPartitionService - Partitions changed: 
+[QK(Main,TB_CORE,system)] - [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[QK(Edge,TB_CORE,system)] - [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+2025-11-30 13:40:13,575 [api-usage-scheduled-19-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage] CURRENT PARTITIONS: []
+2025-11-30 13:40:13,575 [main] INFO  o.t.s.a.service.DefaultActorService - Received partition change event.
+2025-11-30 13:40:13,575 [api-usage-scheduled-19-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage] NEW PARTITIONS: [tb_core.0, tb_core.2, tb_core.4, tb_core.6, tb_core.8, tb_core.1, tb_core.3, tb_core.5, tb_core.7, tb_core.9]
+2025-11-30 13:40:13,575 [api-usage-scheduled-19-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage] ADDED PARTITIONS: [tb_core.0, tb_core.2, tb_core.4, tb_core.6, tb_core.8, tb_core.1, tb_core.3, tb_core.5, tb_core.7, tb_core.9]
+2025-11-30 13:40:13,575 [api-usage-scheduled-19-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage] REMOVED PARTITIONS: []
+2025-11-30 13:40:13,576 [device-state-scheduled-21-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State] CURRENT PARTITIONS: []
+2025-11-30 13:40:13,577 [device-state-scheduled-21-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State] NEW PARTITIONS: [tb_core.0, tb_core.2, tb_core.4, tb_core.6, tb_core.8, tb_core.1, tb_core.3, tb_core.5, tb_core.7, tb_core.9]
+2025-11-30 13:40:13,577 [device-state-scheduled-21-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State] ADDED PARTITIONS: [tb_core.0, tb_core.2, tb_core.4, tb_core.6, tb_core.8, tb_core.1, tb_core.3, tb_core.5, tb_core.7, tb_core.9]
+2025-11-30 13:40:13,577 [api-usage-scheduled-19-thread-1] INFO  o.t.s.s.a.DefaultTbApiUsageStateService - Initializing tenant states.
+2025-11-30 13:40:13,577 [device-state-scheduled-21-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State] REMOVED PARTITIONS: []
+2025-11-30 13:40:13,578 [notifications-scheduler-49-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler] CURRENT PARTITIONS: []
+2025-11-30 13:40:13,578 [notifications-scheduler-49-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler] NEW PARTITIONS: [tb_core.0, tb_core.2, tb_core.4, tb_core.6, tb_core.8, tb_core.1, tb_core.3, tb_core.5, tb_core.7, tb_core.9]
+2025-11-30 13:40:13,578 [notifications-scheduler-49-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler] ADDED PARTITIONS: [tb_core.0, tb_core.2, tb_core.4, tb_core.6, tb_core.8, tb_core.1, tb_core.3, tb_core.5, tb_core.7, tb_core.9]
+2025-11-30 13:40:13,578 [notifications-scheduler-49-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler] REMOVED PARTITIONS: []
+2025-11-30 13:40:13,587 [tb-core-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(Main,TB_CORE,system)] Added partitions: [tb_core.0, tb_core.2, tb_core.4, tb_core.6, tb_core.8, tb_core.1, tb_core.3, tb_core.5, tb_core.7, tb_core.9], removed partitions: []
+2025-11-30 13:40:13,592 [main] INFO  o.t.s.q.d.HashPartitionService - Partitions changed: 
+[QK(Main,TB_VC_EXECUTOR,system)] - [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+2025-11-30 13:40:13,593 [tb-edge-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(Edge,TB_CORE,system)] New partitions: [tb_edge.0, tb_edge.2, tb_edge.4, tb_edge.6, tb_edge.8, tb_edge.1, tb_edge.3, tb_edge.5, tb_edge.7, tb_edge.9]
+2025-11-30 13:40:13,593 [tb-core-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(Main,TB_CORE,system)-0] Launching consumer
+2025-11-30 13:40:13,594 [tb-edge-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(Edge,TB_CORE,system)] Launching consumer
+2025-11-30 13:40:13,594 [main] INFO  o.t.s.q.d.HashPartitionService - Partitions changed: 
+[QK(Main,TB_RULE_ENGINE,system)] - [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[QK(SequentialByOriginator,TB_RULE_ENGINE,system)] - [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[QK(CalculatedFieldStates,TB_RULE_ENGINE,system)] - [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[QK(HighPriority,TB_RULE_ENGINE,system)] - [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+[QK(CalculatedFields,TB_RULE_ENGINE,system)] - [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+2025-11-30 13:40:13,594 [main] INFO  o.t.s.a.service.DefaultActorService - Received partition change event.
+2025-11-30 13:40:13,595 [main] INFO  o.t.s.q.d.HashPartitionService - Partitions changed: 
+[QK(Main,EDQS,system)] - [0, 1, 10, 11, 2, 3, 4, 5, 6, 7, 8, 9]
+2025-11-30 13:40:13,595 [tb-core-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(Main,TB_CORE,system)-2] Launching consumer
+2025-11-30 13:40:13,596 [main] INFO  o.t.s.t.s.s.SnmpTransportBalancingService - Recalculating partitions for SNMP transports
+2025-11-30 13:40:13,598 [tb-core-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(Main,TB_CORE,system)-4] Launching consumer
+2025-11-30 13:40:13,598 [main] INFO  o.t.s.t.s.s.SnmpTransportBalancingService - SNMP transports partitions have not changed
+2025-11-30 13:40:13,599 [tb-core-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(Main,TB_CORE,system)-6] Launching consumer
+2025-11-30 13:40:13,600 [tb-core-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(Main,TB_CORE,system)-8] Launching consumer
+2025-11-30 13:40:13,601 [tb-core-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(Main,TB_CORE,system)-1] Launching consumer
+2025-11-30 13:40:13,602 [tb-core-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(Main,TB_CORE,system)-3] Launching consumer
+2025-11-30 13:40:13,603 [tb-core-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(Main,TB_CORE,system)-5] Launching consumer
+2025-11-30 13:40:13,604 [tb-core-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(Main,TB_CORE,system)-7] Launching consumer
+2025-11-30 13:40:13,609 [tb-core-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(Main,TB_CORE,system)-9] Launching consumer
+2025-11-30 13:40:14,119 [main] INFO  o.t.s.a.service.DefaultActorService - Received application ready event. Sending application init message to actor system
+2025-11-30 13:40:14,121 [app-dispatcher-31-thread-1] INFO  o.t.server.actors.app.AppActor - Starting main system actor.
+2025-11-30 13:40:14,150 [main] INFO  o.t.s.s.edge.rpc.EdgeGrpcService - Initializing Edge RPC service!
+2025-11-30 13:40:14,166 [app-dispatcher-31-thread-1] INFO  o.t.server.actors.app.AppActor - Main system actor started.
+2025-11-30 13:40:14,770 [notifications-scheduler-49-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler] Managing following partitions:
+2025-11-30 13:40:14,771 [notifications-scheduler-49-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler][tb_core.4]: 0 entities
+2025-11-30 13:40:14,771 [notifications-scheduler-49-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler][tb_core.8]: 0 entities
+2025-11-30 13:40:14,772 [notifications-scheduler-49-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler][tb_core.0]: 0 entities
+2025-11-30 13:40:14,772 [notifications-scheduler-49-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler][tb_core.3]: 0 entities
+2025-11-30 13:40:14,772 [notifications-scheduler-49-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler][tb_core.7]: 0 entities
+2025-11-30 13:40:14,772 [notifications-scheduler-49-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler][tb_core.2]: 0 entities
+2025-11-30 13:40:14,772 [notifications-scheduler-49-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler][tb_core.6]: 0 entities
+2025-11-30 13:40:14,772 [notifications-scheduler-49-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler][tb_core.5]: 0 entities
+2025-11-30 13:40:14,772 [notifications-scheduler-49-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler][tb_core.1]: 0 entities
+2025-11-30 13:40:14,772 [notifications-scheduler-49-thread-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Notifications scheduler][tb_core.9]: 0 entities
+2025-11-30 13:40:15,037 [main] INFO  o.t.s.s.edge.rpc.EdgeGrpcService - Going to start Edge RPC server using port: 7070
+2025-11-30 13:40:15,164 [device-state-scheduled-21-thread-1] INFO  o.t.s.s.s.DefaultDeviceStateService - [tb_core.4] Submit task for device states: 1
+2025-11-30 13:40:15,167 [device-state-scheduled-21-thread-1] INFO  o.t.s.s.s.DefaultDeviceStateService - [tb_core.7] Submit task for device states: 1
+2025-11-30 13:40:15,168 [device-state-scheduled-21-thread-1] INFO  o.t.s.s.s.DefaultDeviceStateService - [tb_core.9] Submit task for device states: 3
+2025-11-30 13:40:15,171 [device-state-scheduled-21-thread-1] INFO  o.t.s.s.s.DefaultDeviceStateService - [tb_core.5] Submit task for device states: 1
+2025-11-30 13:40:15,171 [device-state-scheduled-21-thread-1] INFO  o.t.s.s.s.DefaultDeviceStateService - [tb_core.2] Submit task for device states: 2
+2025-11-30 13:40:15,171 [device-state-scheduled-21-thread-1] INFO  o.t.s.s.s.DefaultDeviceStateService - [tb_core.1] Submit task for device states: 2
+2025-11-30 13:40:15,189 [DbCallbackExecutorService-0-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage] Managing following partitions:
+2025-11-30 13:40:15,189 [DbCallbackExecutorService-0-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage][tb_core.4]: 0 entities
+2025-11-30 13:40:15,189 [DbCallbackExecutorService-0-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage][tb_core.8]: 0 entities
+2025-11-30 13:40:15,189 [DbCallbackExecutorService-0-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage][tb_core.0]: 0 entities
+2025-11-30 13:40:15,189 [DbCallbackExecutorService-0-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage][tb_core.3]: 1 entities
+2025-11-30 13:40:15,190 [DbCallbackExecutorService-0-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage][tb_core.7]: 1 entities
+2025-11-30 13:40:15,190 [DbCallbackExecutorService-0-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage][tb_core.2]: 0 entities
+2025-11-30 13:40:15,190 [DbCallbackExecutorService-0-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage][tb_core.6]: 0 entities
+2025-11-30 13:40:15,190 [DbCallbackExecutorService-0-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage][tb_core.5]: 0 entities
+2025-11-30 13:40:15,190 [DbCallbackExecutorService-0-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage][tb_core.1]: 0 entities
+2025-11-30 13:40:15,190 [DbCallbackExecutorService-0-1] INFO  o.t.s.s.p.AbstractPartitionBasedService - [API Usage][tb_core.9]: 0 entities
+2025-11-30 13:40:15,262 [device-state-0-3] INFO  o.t.s.s.s.DefaultDeviceStateService - [9] Initialized 3 out of 3 device states
+2025-11-30 13:40:15,262 [device-state-0-4] INFO  o.t.s.s.s.DefaultDeviceStateService - [5] Initialized 1 out of 1 device states
+2025-11-30 13:40:15,262 [device-state-0-6] INFO  o.t.s.s.s.DefaultDeviceStateService - [1] Initialized 2 out of 2 device states
+2025-11-30 13:40:15,264 [device-state-0-1] INFO  o.t.s.s.s.DefaultDeviceStateService - [4] Initialized 1 out of 1 device states
+2025-11-30 13:40:15,268 [device-state-0-2] INFO  o.t.s.s.s.DefaultDeviceStateService - [7] Initialized 1 out of 1 device states
+2025-11-30 13:40:15,283 [device-state-0-5] INFO  org.owasp.validator.html.Policy - Attempting to load AntiSamy policy from an input stream.
+2025-11-30 13:40:15,305 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [1] totalSaved [0] totalFailed [0]
+2025-11-30 13:40:15,472 [main] INFO  o.t.s.s.edge.rpc.EdgeGrpcService - Edge RPC service initialized!
+2025-11-30 13:40:15,476 [main] INFO  o.t.s.q.c.c.QueueConsumerManager - [Housekeeper reprocessing] Launching consumer
+2025-11-30 13:40:15,478 [main] INFO  o.t.s.q.c.c.QueueConsumerManager - [Housekeeper] Launching consumer
+2025-11-30 13:40:15,480 [main] INFO  o.t.s.q.c.c.QueueConsumerManager - [job-stats] Launching consumer
+2025-11-30 13:40:15,511 [main] INFO  o.t.s.q.c.c.QueueConsumerManager - [TB Rule Engine Notifications] Launching consumer
+2025-11-30 13:40:15,516 [main] INFO  o.t.s.s.q.DefaultTbCalculatedFieldConsumerService - Handling partition change event: PartitionChangeEvent(super=TbApplicationEvent(sequenceNumber=3), serviceType=TB_RULE_ENGINE, newPartitions={QK(Main,TB_RULE_ENGINE,system)=[tb_rule_engine.main.0, tb_rule_engine.main.2, tb_rule_engine.main.4, tb_rule_engine.main.6, tb_rule_engine.main.8, tb_rule_engine.main.1, tb_rule_engine.main.3, tb_rule_engine.main.5, tb_rule_engine.main.7, tb_rule_engine.main.9], QK(SequentialByOriginator,TB_RULE_ENGINE,system)=[tb_rule_engine.sq.0, tb_rule_engine.sq.2, tb_rule_engine.sq.4, tb_rule_engine.sq.6, tb_rule_engine.sq.8, tb_rule_engine.sq.1, tb_rule_engine.sq.3, tb_rule_engine.sq.5, tb_rule_engine.sq.7, tb_rule_engine.sq.9], QK(CalculatedFieldStates,TB_RULE_ENGINE,system)=[tb_cf_state.1, tb_cf_state.3, tb_cf_state.5, tb_cf_state.7, tb_cf_state.9, tb_cf_state.0, tb_cf_state.2, tb_cf_state.4, tb_cf_state.6, tb_cf_state.8], QK(HighPriority,TB_RULE_ENGINE,system)=[tb_rule_engine.hp.1, tb_rule_engine.hp.3, tb_rule_engine.hp.5, tb_rule_engine.hp.7, tb_rule_engine.hp.9, tb_rule_engine.hp.0, tb_rule_engine.hp.2, tb_rule_engine.hp.4, tb_rule_engine.hp.6, tb_rule_engine.hp.8], QK(CalculatedFields,TB_RULE_ENGINE,system)=[tb_cf_event.1, tb_cf_event.3, tb_cf_event.5, tb_cf_event.7, tb_cf_event.9, tb_cf_event.0, tb_cf_event.2, tb_cf_event.4, tb_cf_event.6, tb_cf_event.8]}, oldPartitions={QK(Main,TB_RULE_ENGINE,system)=[], QK(SequentialByOriginator,TB_RULE_ENGINE,system)=[], QK(Main,EDQS,system)=[], QK(CalculatedFieldStates,TB_RULE_ENGINE,system)=[], QK(Main,TB_CORE,system)=[], QK(HighPriority,TB_RULE_ENGINE,system)=[], QK(CalculatedFields,TB_RULE_ENGINE,system)=[], QK(Main,TB_VC_EXECUTOR,system)=[], QK(Edge,TB_CORE,system)=[]})
+2025-11-30 13:40:15,536 [main] INFO  o.t.s.q.c.c.QueueConsumerManager - [TB Core Notifications] Launching consumer
+2025-11-30 13:40:15,537 [tb-cf-mgmt-0-1] INFO  o.t.s.q.c.c.PartitionedQueueConsumerManager - [QK(CalculatedFields,TB_RULE_ENGINE,system)] Added partitions: [tb_cf_event.1, tb_cf_event.3, tb_cf_event.5, tb_cf_event.7, tb_cf_event.9, tb_cf_event.0, tb_cf_event.2, tb_cf_event.4, tb_cf_event.6, tb_cf_event.8]
+2025-11-30 13:40:15,537 [tb-cf-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(CalculatedFields,TB_RULE_ENGINE,system)-1] Launching consumer
+2025-11-30 13:40:15,539 [main] INFO  o.t.s.q.c.c.QueueConsumerManager - [TB Ota Package States] Launching consumer
+2025-11-30 13:40:15,539 [tb-cf-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(CalculatedFields,TB_RULE_ENGINE,system)-3] Launching consumer
+2025-11-30 13:40:15,540 [main] INFO  o.t.s.q.c.c.QueueConsumerManager - [TB Usage Stats] Launching consumer
+2025-11-30 13:40:15,542 [tb-cf-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(CalculatedFields,TB_RULE_ENGINE,system)-5] Launching consumer
+2025-11-30 13:40:15,542 [main] INFO  o.t.s.q.c.c.QueueConsumerManager - [TB Core Notifications] Launching consumer
+2025-11-30 13:40:15,542 [notifications-tb-core-consumer-52-thread-11] INFO  o.t.s.s.q.DefaultTbCoreConsumerService - [e59ed201857d] Processing core startup with partitions: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+2025-11-30 13:40:15,544 [tb-cf-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(CalculatedFields,TB_RULE_ENGINE,system)-7] Launching consumer
+2025-11-30 13:40:15,547 [main] INFO  o.t.s.q.c.c.QueueConsumerManager - [TB Rule Engine Notifications] Launching consumer
+2025-11-30 13:40:15,548 [tb-cf-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(CalculatedFields,TB_RULE_ENGINE,system)-9] Launching consumer
+2025-11-30 13:40:15,553 [tb-cf-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(CalculatedFields,TB_RULE_ENGINE,system)-0] Launching consumer
+2025-11-30 13:40:15,554 [DefaultTbLocalSubscriptionService-0-1] INFO  o.t.s.s.s.DefaultTbLocalSubscriptionService - [e59ed201857d] Pushed 0 subscriptions to [e59ed201857d]
+2025-11-30 13:40:15,557 [tb-cf-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(CalculatedFields,TB_RULE_ENGINE,system)-2] Launching consumer
+2025-11-30 13:40:15,560 [tb-cf-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(CalculatedFields,TB_RULE_ENGINE,system)-4] Launching consumer
+2025-11-30 13:40:15,561 [tb-cf-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(CalculatedFields,TB_RULE_ENGINE,system)-6] Launching consumer
+2025-11-30 13:40:15,561 [tb-cf-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(CalculatedFields,TB_RULE_ENGINE,system)-8] Launching consumer
+2025-11-30 13:40:15,569 [main] INFO  o.t.s.s.q.DefaultTbRuleEngineConsumerService - Handling partition change event: PartitionChangeEvent(super=TbApplicationEvent(sequenceNumber=3), serviceType=TB_RULE_ENGINE, newPartitions={QK(Main,TB_RULE_ENGINE,system)=[tb_rule_engine.main.0, tb_rule_engine.main.2, tb_rule_engine.main.4, tb_rule_engine.main.6, tb_rule_engine.main.8, tb_rule_engine.main.1, tb_rule_engine.main.3, tb_rule_engine.main.5, tb_rule_engine.main.7, tb_rule_engine.main.9], QK(SequentialByOriginator,TB_RULE_ENGINE,system)=[tb_rule_engine.sq.0, tb_rule_engine.sq.2, tb_rule_engine.sq.4, tb_rule_engine.sq.6, tb_rule_engine.sq.8, tb_rule_engine.sq.1, tb_rule_engine.sq.3, tb_rule_engine.sq.5, tb_rule_engine.sq.7, tb_rule_engine.sq.9], QK(CalculatedFieldStates,TB_RULE_ENGINE,system)=[tb_cf_state.1, tb_cf_state.3, tb_cf_state.5, tb_cf_state.7, tb_cf_state.9, tb_cf_state.0, tb_cf_state.2, tb_cf_state.4, tb_cf_state.6, tb_cf_state.8], QK(HighPriority,TB_RULE_ENGINE,system)=[tb_rule_engine.hp.1, tb_rule_engine.hp.3, tb_rule_engine.hp.5, tb_rule_engine.hp.7, tb_rule_engine.hp.9, tb_rule_engine.hp.0, tb_rule_engine.hp.2, tb_rule_engine.hp.4, tb_rule_engine.hp.6, tb_rule_engine.hp.8], QK(CalculatedFields,TB_RULE_ENGINE,system)=[tb_cf_event.1, tb_cf_event.3, tb_cf_event.5, tb_cf_event.7, tb_cf_event.9, tb_cf_event.0, tb_cf_event.2, tb_cf_event.4, tb_cf_event.6, tb_cf_event.8]}, oldPartitions={QK(Main,TB_RULE_ENGINE,system)=[], QK(SequentialByOriginator,TB_RULE_ENGINE,system)=[], QK(Main,EDQS,system)=[], QK(CalculatedFieldStates,TB_RULE_ENGINE,system)=[], QK(Main,TB_CORE,system)=[], QK(HighPriority,TB_RULE_ENGINE,system)=[], QK(CalculatedFields,TB_RULE_ENGINE,system)=[], QK(Main,TB_VC_EXECUTOR,system)=[], QK(Edge,TB_CORE,system)=[]})
+2025-11-30 13:40:15,577 [main] INFO  o.t.s.s.t.TbCoreTransportApiService - Received application ready event. Starting polling for events.
+2025-11-30 13:40:15,578 [tb-rule-engine-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(Main,TB_RULE_ENGINE,system)] Added partitions: [tb_rule_engine.main.0, tb_rule_engine.main.2, tb_rule_engine.main.4, tb_rule_engine.main.6, tb_rule_engine.main.8, tb_rule_engine.main.1, tb_rule_engine.main.3, tb_rule_engine.main.5, tb_rule_engine.main.7, tb_rule_engine.main.9], removed partitions: []
+2025-11-30 13:40:15,578 [tb-rule-engine-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(Main,TB_RULE_ENGINE,system)-0] Launching consumer
+2025-11-30 13:40:15,579 [tb-rule-engine-mgmt-0-2] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(SequentialByOriginator,TB_RULE_ENGINE,system)] Added partitions: [tb_rule_engine.sq.0, tb_rule_engine.sq.2, tb_rule_engine.sq.4, tb_rule_engine.sq.6, tb_rule_engine.sq.8, tb_rule_engine.sq.1, tb_rule_engine.sq.3, tb_rule_engine.sq.5, tb_rule_engine.sq.7, tb_rule_engine.sq.9], removed partitions: []
+2025-11-30 13:40:15,579 [tb-rule-engine-mgmt-0-2] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(SequentialByOriginator,TB_RULE_ENGINE,system)-0] Launching consumer
+2025-11-30 13:40:15,579 [tb-rule-engine-mgmt-0-3] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(HighPriority,TB_RULE_ENGINE,system)] Added partitions: [tb_rule_engine.hp.1, tb_rule_engine.hp.3, tb_rule_engine.hp.5, tb_rule_engine.hp.7, tb_rule_engine.hp.9, tb_rule_engine.hp.0, tb_rule_engine.hp.2, tb_rule_engine.hp.4, tb_rule_engine.hp.6, tb_rule_engine.hp.8], removed partitions: []
+2025-11-30 13:40:15,580 [tb-rule-engine-mgmt-0-3] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(HighPriority,TB_RULE_ENGINE,system)-1] Launching consumer
+2025-11-30 13:40:15,581 [tb-rule-engine-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(Main,TB_RULE_ENGINE,system)-2] Launching consumer
+2025-11-30 13:40:15,585 [tb-rule-engine-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(Main,TB_RULE_ENGINE,system)-4] Launching consumer
+2025-11-30 13:40:15,585 [tb-rule-engine-mgmt-0-2] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(SequentialByOriginator,TB_RULE_ENGINE,system)-2] Launching consumer
+2025-11-30 13:40:15,585 [tb-rule-engine-mgmt-0-3] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(HighPriority,TB_RULE_ENGINE,system)-3] Launching consumer
+2025-11-30 13:40:15,590 [tb-rule-engine-mgmt-0-2] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(SequentialByOriginator,TB_RULE_ENGINE,system)-4] Launching consumer
+2025-11-30 13:40:15,591 [tb-rule-engine-mgmt-0-3] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(HighPriority,TB_RULE_ENGINE,system)-5] Launching consumer
+2025-11-30 13:40:15,591 [tb-rule-engine-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(Main,TB_RULE_ENGINE,system)-6] Launching consumer
+2025-11-30 13:40:15,594 [tb-rule-engine-mgmt-0-2] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(SequentialByOriginator,TB_RULE_ENGINE,system)-6] Launching consumer
+2025-11-30 13:40:15,598 [tb-rule-engine-mgmt-0-3] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(HighPriority,TB_RULE_ENGINE,system)-7] Launching consumer
+2025-11-30 13:40:15,598 [tb-rule-engine-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(Main,TB_RULE_ENGINE,system)-8] Launching consumer
+2025-11-30 13:40:15,599 [tb-rule-engine-mgmt-0-2] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(SequentialByOriginator,TB_RULE_ENGINE,system)-8] Launching consumer
+2025-11-30 13:40:15,599 [main] INFO  o.t.s.q.c.c.QueueConsumerManager - [TB Transport] Launching consumer
+2025-11-30 13:40:15,603 [tb-rule-engine-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(Main,TB_RULE_ENGINE,system)-1] Launching consumer
+2025-11-30 13:40:15,602 [tb-rule-engine-mgmt-0-3] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(HighPriority,TB_RULE_ENGINE,system)-9] Launching consumer
+2025-11-30 13:40:15,604 [tb-rule-engine-mgmt-0-2] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(SequentialByOriginator,TB_RULE_ENGINE,system)-1] Launching consumer
+2025-11-30 13:40:15,609 [tb-rule-engine-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(Main,TB_RULE_ENGINE,system)-3] Launching consumer
+2025-11-30 13:40:15,610 [tb-rule-engine-mgmt-0-3] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(HighPriority,TB_RULE_ENGINE,system)-0] Launching consumer
+2025-11-30 13:40:15,614 [tb-rule-engine-mgmt-0-2] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(SequentialByOriginator,TB_RULE_ENGINE,system)-3] Launching consumer
+2025-11-30 13:40:15,614 [tb-rule-engine-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(Main,TB_RULE_ENGINE,system)-5] Launching consumer
+2025-11-30 13:40:15,616 [tb-rule-engine-mgmt-0-3] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(HighPriority,TB_RULE_ENGINE,system)-2] Launching consumer
+2025-11-30 13:40:15,620 [tb-rule-engine-mgmt-0-2] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(SequentialByOriginator,TB_RULE_ENGINE,system)-5] Launching consumer
+2025-11-30 13:40:15,621 [tb-rule-engine-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(Main,TB_RULE_ENGINE,system)-7] Launching consumer
+2025-11-30 13:40:15,622 [tb-rule-engine-mgmt-0-3] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(HighPriority,TB_RULE_ENGINE,system)-4] Launching consumer
+2025-11-30 13:40:15,623 [tb-rule-engine-mgmt-0-2] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(SequentialByOriginator,TB_RULE_ENGINE,system)-7] Launching consumer
+2025-11-30 13:40:15,623 [tb-rule-engine-mgmt-0-1] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(Main,TB_RULE_ENGINE,system)-9] Launching consumer
+2025-11-30 13:40:15,624 [tb-rule-engine-mgmt-0-2] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(SequentialByOriginator,TB_RULE_ENGINE,system)-9] Launching consumer
+2025-11-30 13:40:15,628 [tb-rule-engine-mgmt-0-3] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(HighPriority,TB_RULE_ENGINE,system)-6] Launching consumer
+2025-11-30 13:40:15,632 [tb-rule-engine-mgmt-0-3] INFO  o.t.s.q.c.c.MainQueueConsumerManager - [QK(HighPriority,TB_RULE_ENGINE,system)-8] Launching consumer
+2025-11-30 13:40:15,706 [main] INFO  o.e.c.c.network.RandomTokenGenerator - using tokens of 8 bytes in length
+2025-11-30 13:40:15,707 [main] INFO  o.e.c.core.network.CoapEndpoint - [LWM2M Server-coap://0.0.0.0:5685] CoapEndpoint uses udp context
+2025-11-30 13:40:15,708 [main] INFO  o.e.c.c.network.stack.BlockwiseLayer - [LWM2M Server-coap://0.0.0.0:5685] BlockwiseLayer uses MAX_MESSAGE_SIZE=1024, PREFERRED_BLOCK_SIZE=1024, BLOCKWISE_STATUS_LIFETIME=300000, MAX_RESOURCE_BODY_SIZE=268435456, BLOCKWISE_STRICT_BLOCK2_OPTION=true
+2025-11-30 13:40:15,719 [main] INFO  o.t.s.t.l.s.DefaultLwM2mTransportService - Unable to load X509 files for LWM2MServer
+2025-11-30 13:40:15,721 [main] WARN  o.e.l.s.c.e.c.CoapsServerEndpointFactory - PskStore should be automatically set by Leshan. Using a custom implementation is not advised.
+2025-11-30 13:40:15,722 [main] INFO  o.e.c.s.d.InMemoryReadWriteLockConnectionStore - Created new InMemoryConnectionStore [capacity: 150000, connection expiration threshold: 1800s]
+2025-11-30 13:40:15,722 [main] INFO  o.e.c.c.network.RandomTokenGenerator - using tokens of 8 bytes in length
+2025-11-30 13:40:15,722 [main] INFO  o.e.c.core.network.CoapEndpoint - [LWM2M Server-coaps://0.0.0.0:5686] CoapEndpoint uses lwm2m correlation
+2025-11-30 13:40:15,722 [main] INFO  o.e.c.c.network.stack.BlockwiseLayer - [LWM2M Server-coaps://0.0.0.0:5686] BlockwiseLayer uses MAX_MESSAGE_SIZE=1024, PREFERRED_BLOCK_SIZE=1024, BLOCKWISE_STATUS_LIFETIME=300000, MAX_RESOURCE_BODY_SIZE=268435456, BLOCKWISE_STRICT_BLOCK2_OPTION=true
+2025-11-30 13:40:15,758 [main] INFO  o.t.s.t.l.s.DefaultLwM2mTransportService - Starting LwM2M transport server...
+2025-11-30 13:40:15,761 [main] INFO  o.e.californium.core.CoapServer - Starting server
+2025-11-30 13:40:15,780 [main] INFO  o.e.c.elements.UDPConnector - UDPConnector starts up 2 sender threads and 2 receiver threads
+2025-11-30 13:40:15,797 [main] INFO  o.e.c.elements.UDPConnector - UDPConnector listening on /[0:0:0:0:0:0:0:0]:5685, recv buf = 106496, send buf = 106496, recv packet size = 2048
+2025-11-30 13:40:15,798 [main] INFO  o.e.c.core.network.CoapEndpoint - [LWM2M Server-coap://0.0.0.0:5685] Started endpoint at coap://[0:0:0:0:0:0:0:0]:5685
+2025-11-30 13:40:15,800 [device-state-0-5] WARN  org.owasp.validator.html.Policy - The directive "noopenerAndNoreferrerAnchors" is enabled by default, but disabled in this policy. It is recommended to leave it enabled to prevent reverse tabnabbing attacks.
+2025-11-30 13:40:15,806 [main] INFO  o.e.c.scandium.DTLSConnector - multiple network interfaces, using smallest MTU [IPv4 1500, IPv6 1280]
+2025-11-30 13:40:15,828 [DTLS-Receiver-0-/[0:0:0:0:0:0:0:0]:5686] INFO  o.e.c.scandium.DTLSConnector - Starting worker thread [DTLS-Receiver-0-/[0:0:0:0:0:0:0:0]:5686]
+2025-11-30 13:40:15,829 [main] INFO  o.e.c.scandium.DTLSConnector - DTLSConnector listening on /[0:0:0:0:0:0:0:0]:5686, recv buf = 106496, send buf = 106496, recv packet size = 16490, MTU = IPv4 1500 / IPv6 1280
+2025-11-30 13:40:15,829 [main] INFO  o.e.c.core.network.CoapEndpoint - [LWM2M Server-coaps://0.0.0.0:5686] Started endpoint at coaps://[0:0:0:0:0:0:0:0]:5686
+2025-11-30 13:40:15,829 [main] INFO  o.eclipse.leshan.server.LeshanServer - LWM2M server started.
+2025-11-30 13:40:15,830 [main] INFO  o.eclipse.leshan.server.LeshanServer - CoAP over UDP endpoint based on Californium library available at coap://[0:0:0:0:0:0:0:0]:5685.
+2025-11-30 13:40:15,830 [main] INFO  o.eclipse.leshan.server.LeshanServer - CoAP over DTLS endpoint based on Californium/Scandium library available at coaps://[0:0:0:0:0:0:0:0]:5686.
+2025-11-30 13:40:15,831 [DTLS-Receiver-1-/[0:0:0:0:0:0:0:0]:5686] INFO  o.e.c.scandium.DTLSConnector - Starting worker thread [DTLS-Receiver-1-/[0:0:0:0:0:0:0:0]:5686]
+2025-11-30 13:40:15,847 [main] INFO  o.t.s.t.l.s.DefaultLwM2mTransportService - Started LwM2M transport server.
+2025-11-30 13:40:15,848 [main] INFO  o.t.s.t.snmp.SnmpTransportContext - Initializing SNMP devices sessions
+2025-11-30 13:40:16,046 [device-state-0-5] INFO  o.t.s.s.s.DefaultDeviceStateService - [2] Initialized 2 out of 2 device states
+2025-11-30 13:40:16,050 [device-state-0-5] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State] Managing following partitions:
+2025-11-30 13:40:16,050 [device-state-0-5] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State][tb_core.4]: 1 entities
+2025-11-30 13:40:16,051 [device-state-0-5] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State][tb_core.8]: 0 entities
+2025-11-30 13:40:16,057 [device-state-0-5] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State][tb_core.0]: 0 entities
+2025-11-30 13:40:16,057 [device-state-0-5] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State][tb_core.3]: 0 entities
+2025-11-30 13:40:16,057 [device-state-0-5] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State][tb_core.7]: 1 entities
+2025-11-30 13:40:16,057 [device-state-0-5] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State][tb_core.2]: 2 entities
+2025-11-30 13:40:16,057 [device-state-0-5] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State][tb_core.6]: 0 entities
+2025-11-30 13:40:16,057 [device-state-0-5] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State][tb_core.5]: 1 entities
+2025-11-30 13:40:16,057 [device-state-0-5] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State][tb_core.1]: 2 entities
+2025-11-30 13:40:16,057 [device-state-0-5] INFO  o.t.s.s.p.AbstractPartitionBasedService - [Device State][tb_core.9]: 3 entities
+2025-11-30 13:40:18,137 [rule-dispatcher-0-3] INFO  c.d.oss.driver.api.core.uuid.Uuids - PID obtained through native call to getpid(): 22
+2025-11-30 13:40:18,144 [rule-dispatcher-0-3] INFO  o.t.s.d.s.i.s.SqlPartitioningRepository - Saving partition 1764201600000-1764806400000 for table lc_event
+2025-11-30 13:40:18,269 [main] INFO  o.t.s.ThingsboardServerApplication - Started ThingsBoard in 57 seconds
+2025-11-30 13:40:22,336 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-0 [Events] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:40:22,337 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [Events] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:40:22,338 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [Events] queueSize [0] totalAdded [3] totalSaved [3] totalFailed [0]
+2025-11-30 13:40:24,227 [git-sync-43-thread-1] INFO  o.t.s.s.sync.DefaultGitSyncService - [gateways-dashboard] Initialized repository
+2025-11-30 13:40:24,492 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-0 [Attributes] queueSize [0] totalAdded [2] totalSaved [2] totalFailed [0]
+2025-11-30 13:40:25,099 [git-sync-43-thread-1] INFO  o.t.s.d.resource.BaseResourceService - Updating system resource gateway-management-extension.js
+2025-11-30 13:40:25,237 [app-dispatcher-31-thread-1] WARN  o.t.server.actors.app.AppActor - Message has system tenant id: ComponentLifecycleMsg(tenantId=13814000-1dd2-11b2-8080-808080808080, entityId=54758d20-ccf1-11f0-81f3-0bf1425738f5, event=UPDATED, oldName=null, name=null, oldProfileId=null, profileId=null, info=null)
+2025-11-30 13:40:25,263 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:40:25,304 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [6] totalSaved [7] totalFailed [0]
+2025-11-30 13:40:25,716 [app-dispatcher-31-thread-1] WARN  o.t.server.actors.app.AppActor - Message has system tenant id: ComponentLifecycleMsg(tenantId=13814000-1dd2-11b2-8080-808080808080, entityId=5471bc90-ccf1-11f0-81f3-0bf1425738f5, event=UPDATED, oldName=null, name=null, oldProfileId=null, profileId=null, info=null)
+2025-11-30 13:40:26,342 [git-sync-43-thread-1] INFO  o.t.s.d.resource.BaseResourceService - Updating system resource gateways_dashboard.json
+2025-11-30 13:40:26,354 [git-sync-43-thread-1] INFO  o.t.s.s.e.d.DashboardSyncService - Gateways dashboard sync completed
+2025-11-30 13:40:26,371 [app-dispatcher-31-thread-1] WARN  o.t.server.actors.app.AppActor - Message has system tenant id: ComponentLifecycleMsg(tenantId=13814000-1dd2-11b2-8080-808080808080, entityId=5485b9c0-ccf1-11f0-81f3-0bf1425738f5, event=UPDATED, oldName=null, name=null, oldProfileId=null, profileId=null, info=null)
+2025-11-30 13:40:55,262 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:40:55,302 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:41:13,484 [TB-Scheduling-8] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - Total timing statistics below:
+2025-11-30 13:41:13,487 [TB-Scheduling-8] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: calls: 51, failures: 0, exec time: 15409 
+2025-11-30 13:41:13,489 [TB-Scheduling-8] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5] Top 3 methods by timing:
+2025-11-30 13:41:13,490 [TB-Scheduling-8] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaDeviceDao.findDeviceByTenantIdAndId(..), calls: 3, failures: 0, exec time: 6113
+2025-11-30 13:41:13,490 [TB-Scheduling-8] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaRelationDao.findAllByFrom(..), calls: 3, failures: 0, exec time: 4836
+2025-11-30 13:41:13,490 [TB-Scheduling-8] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaAbstractDao.findById(..), calls: 34, failures: 0, exec time: 3031
+2025-11-30 13:41:13,516 [TB-Scheduling-13] INFO  o.t.s.s.queue.EdgeConsumerStats - Edge Stats: totalMsgs = [14] edgeNfs = [14] coreNfEdgeHPUpd = [0] coreNfEdgeUpd = [0] coreNfEdgeSyncReq = [0] coreNfEdgeSyncResp = [0] coreNfEdgeCompLfcl = [0] 
+2025-11-30 13:41:13,516 [TB-Scheduling-7] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 13:41:13,517 [TB-Scheduling-1] INFO  o.t.s.s.queue.TbCoreConsumerStats - Core Stats: totalMsgs = [4] sessionEvents = [0] getAttr = [0] subToAttr = [0] subToRpc = [0] toDevRpc = [0] subInfo = [0] claimDevice = [0] deviceState = [0] subMsgs = [0] deviceConnect = [0] deviceActivity = [0] deviceDisconnect = [0] deviceInactivity = [0] deviceInactivityTimeoutUpdate = [0] coreNfOther = [1] coreNfCompLfcl = [3] coreNfDevRpcRsp = [0] coreNfNfRlProc = [0] coreNfQueueUpd = [0] coreNfQueueDel = [0] coreNfSubSvc = [0] coreNfSubMgr = [0] coreNfVCRsp = [0] 
+2025-11-30 13:41:13,517 [TB-Scheduling-10] INFO  o.t.s.s.q.TbRuleEngineConsumerStats - [Main] Stats: totalMsgs = [1] successfulMsgs = [1] timeoutMsgs = [0] failedMsgs = [0] tmpTimeout = [0] tmpFailed = [0] successfulIterations = [1] failedIterations = [0] 
+2025-11-30 13:41:15,262 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 13:41:15,302 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 13:41:25,260 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:41:25,300 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:41:31,809 [http-nio-0.0.0.0-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-30 13:41:31,810 [http-nio-0.0.0.0-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-30 13:41:31,882 [http-nio-0.0.0.0-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 71 ms
+2025-11-30 13:41:42,976 [http-nio-0.0.0.0-9090-exec-2] INFO  o.t.s.c.plugin.TbWebSocketHandler - [5489b160-ccf1-11f0-81f3-0bf1425738f5][550b6480-ccf1-11f0-81f3-0bf1425738f5][59095f6b-2774-4bf2-8263-4cf9675a75e6][ff57fcf2-d50d-8135-e5f7-0d5c1de30588] Session established from address: /172.18.0.1:39076
+2025-11-30 13:41:53,529 [TB-Scheduling-8] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [2], regularQueryInvocationTime = [37], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:41:55,257 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:41:55,298 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:42:03,531 [TB-Scheduling-7] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:42:13,487 [TB-Scheduling-15] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - Total timing statistics below:
+2025-11-30 13:42:13,487 [TB-Scheduling-15] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: calls: 14, failures: 0, exec time: 892 
+2025-11-30 13:42:13,487 [TB-Scheduling-15] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5] Top 3 methods by timing:
+2025-11-30 13:42:13,487 [TB-Scheduling-15] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaAbstractDao.findById(..), calls: 3, failures: 0, exec time: 465
+2025-11-30 13:42:13,488 [TB-Scheduling-15] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaNotificationDao.countUnreadByDeliveryMethodAndRecipientId(..), calls: 1, failures: 0, exec time: 161
+2025-11-30 13:42:13,488 [TB-Scheduling-15] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaDashboardInfoDao.findDashboardsByTenantId(..), calls: 1, failures: 0, exec time: 61
+2025-11-30 13:42:13,514 [TB-Scheduling-13] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 13:42:13,532 [TB-Scheduling-3] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:42:23,531 [TB-Scheduling-11] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:42:25,256 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:42:25,296 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:42:33,532 [TB-Scheduling-15] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:42:43,534 [TB-Scheduling-16] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:42:53,533 [TB-Scheduling-6] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [1], dynamicQueryInvocationTime = [10], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:42:55,254 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:42:55,294 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:43:03,535 [TB-Scheduling-11] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:43:13,511 [TB-Scheduling-14] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 13:43:13,536 [TB-Scheduling-4] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:43:23,534 [TB-Scheduling-5] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:43:25,251 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:43:25,292 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:43:33,535 [TB-Scheduling-7] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:43:43,536 [TB-Scheduling-16] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:43:53,535 [TB-Scheduling-3] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [1], dynamicQueryInvocationTime = [8], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:43:55,249 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:43:55,289 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:44:03,537 [TB-Scheduling-5] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:44:13,507 [TB-Scheduling-15] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 13:44:13,540 [TB-Scheduling-4] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:44:23,539 [TB-Scheduling-8] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:44:25,247 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:44:25,288 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:44:33,541 [TB-Scheduling-2] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:44:43,542 [TB-Scheduling-9] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:44:53,543 [TB-Scheduling-10] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [1], dynamicQueryInvocationTime = [43], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:44:55,246 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:44:55,286 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:45:03,544 [TB-Scheduling-8] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:45:13,506 [TB-Scheduling-7] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 13:45:13,545 [TB-Scheduling-16] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:45:23,545 [TB-Scheduling-12] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:45:25,243 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:45:25,283 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:45:33,546 [TB-Scheduling-1] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:45:43,548 [TB-Scheduling-14] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:45:53,547 [TB-Scheduling-13] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [1], dynamicQueryInvocationTime = [9], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:45:55,240 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:45:55,281 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:46:03,575 [TB-Scheduling-12] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:46:13,505 [TB-Scheduling-7] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 13:46:13,582 [TB-Scheduling-16] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:46:23,573 [TB-Scheduling-6] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:46:25,231 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:46:25,268 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:46:33,575 [TB-Scheduling-5] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:46:43,576 [TB-Scheduling-4] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:46:53,586 [TB-Scheduling-6] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [1], dynamicQueryInvocationTime = [153], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:46:55,236 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:46:55,277 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:47:03,587 [TB-Scheduling-3] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:47:13,507 [TB-Scheduling-9] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 13:47:13,588 [TB-Scheduling-6] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:47:23,587 [TB-Scheduling-13] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:47:25,234 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:47:25,275 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:47:33,588 [TB-Scheduling-11] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:47:43,593 [TB-Scheduling-12] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:47:53,592 [TB-Scheduling-1] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [1], dynamicQueryInvocationTime = [10], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:47:55,232 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:47:55,273 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:48:03,596 [TB-Scheduling-13] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:48:13,505 [TB-Scheduling-5] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 13:48:13,605 [TB-Scheduling-10] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:48:23,605 [TB-Scheduling-3] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:48:25,230 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:48:25,271 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:48:33,607 [TB-Scheduling-8] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:48:43,614 [TB-Scheduling-16] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:48:53,623 [TB-Scheduling-10] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [1], dynamicQueryInvocationTime = [201], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:48:55,227 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:48:55,266 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:49:03,628 [TB-Scheduling-2] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:49:13,502 [TB-Scheduling-7] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 13:49:13,629 [TB-Scheduling-9] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:49:23,627 [TB-Scheduling-4] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:49:25,223 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:49:25,263 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:49:33,629 [TB-Scheduling-14] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:49:43,631 [TB-Scheduling-11] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:49:53,629 [TB-Scheduling-9] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [1], dynamicQueryInvocationTime = [106], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:49:55,220 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:49:55,260 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:50:03,631 [TB-Scheduling-4] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:50:13,497 [TB-Scheduling-16] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 13:50:13,632 [TB-Scheduling-9] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:50:23,630 [TB-Scheduling-4] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:50:33,631 [TB-Scheduling-15] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:50:35,216 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:50:35,257 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:50:43,639 [TB-Scheduling-16] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:50:53,637 [TB-Scheduling-9] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [1], dynamicQueryInvocationTime = [17], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:50:55,214 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:50:55,254 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:51:03,638 [TB-Scheduling-4] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:51:13,493 [TB-Scheduling-16] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 13:51:13,648 [TB-Scheduling-14] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:51:23,646 [TB-Scheduling-1] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:51:33,648 [TB-Scheduling-13] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:51:35,211 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:51:35,252 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:51:43,649 [TB-Scheduling-7] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:51:53,641 [TB-Scheduling-14] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [1], dynamicQueryInvocationTime = [8], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:51:55,201 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:51:55,241 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:52:03,650 [TB-Scheduling-4] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:52:13,491 [TB-Scheduling-7] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 13:52:13,652 [TB-Scheduling-9] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:52:23,657 [TB-Scheduling-1] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:52:33,659 [TB-Scheduling-13] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:52:35,204 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:52:35,244 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:52:43,660 [TB-Scheduling-7] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:52:53,658 [TB-Scheduling-9] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [1], dynamicQueryInvocationTime = [143], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:52:55,201 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:52:55,242 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:53:03,660 [TB-Scheduling-1] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:53:13,496 [TB-Scheduling-11] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 13:53:13,661 [TB-Scheduling-12] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:53:23,662 [TB-Scheduling-6] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:53:33,663 [TB-Scheduling-3] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:53:35,198 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:53:35,238 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:53:43,665 [TB-Scheduling-11] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:53:53,663 [TB-Scheduling-12] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [1], dynamicQueryInvocationTime = [16], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:53:55,195 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:53:55,235 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:54:03,664 [TB-Scheduling-6] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:54:13,704 [TB-Scheduling-13] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 13:54:13,704 [TB-Scheduling-5] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:54:23,702 [TB-Scheduling-1] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:54:33,704 [TB-Scheduling-15] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:54:35,192 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:54:35,233 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:54:43,708 [TB-Scheduling-8] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:54:53,705 [TB-Scheduling-14] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [1], dynamicQueryInvocationTime = [21], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:54:55,188 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:54:55,229 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:55:03,707 [TB-Scheduling-6] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:55:13,708 [TB-Scheduling-11] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:55:13,712 [TB-Scheduling-9] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 13:55:23,710 [TB-Scheduling-10] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:55:33,711 [TB-Scheduling-4] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:55:35,186 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:55:35,227 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:55:42,870 [TB-Scheduling-3] INFO  o.t.s.dao.sql.event.JpaBaseEventDao - Going to cleanup debug events with exp time: 1763906142693
+2025-11-30 13:55:43,713 [TB-Scheduling-5] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:55:53,711 [TB-Scheduling-12] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [1], dynamicQueryInvocationTime = [30], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:55:55,183 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:55:55,224 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:56:03,712 [TB-Scheduling-7] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:56:13,709 [TB-Scheduling-16] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 13:56:13,713 [TB-Scheduling-11] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:56:23,711 [TB-Scheduling-14] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:56:33,713 [TB-Scheduling-2] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:56:35,180 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:56:35,220 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:56:43,713 [TB-Scheduling-3] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:56:53,712 [TB-Scheduling-11] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [1], dynamicQueryInvocationTime = [18], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:56:55,177 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:56:55,217 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:57:03,714 [TB-Scheduling-14] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:57:13,706 [TB-Scheduling-8] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 13:57:13,715 [TB-Scheduling-5] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:57:23,714 [TB-Scheduling-13] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:57:33,718 [TB-Scheduling-6] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:57:35,173 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:57:35,214 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:57:43,720 [TB-Scheduling-1] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:57:53,718 [TB-Scheduling-5] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [1], dynamicQueryInvocationTime = [8], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:57:55,171 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:57:55,211 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:58:03,721 [TB-Scheduling-13] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:58:13,702 [TB-Scheduling-16] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 13:58:13,722 [TB-Scheduling-8] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:58:23,721 [TB-Scheduling-12] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:58:33,721 [TB-Scheduling-10] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:58:35,168 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:58:35,208 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:58:43,722 [TB-Scheduling-4] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:58:53,720 [TB-Scheduling-8] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [1], dynamicQueryInvocationTime = [8], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:58:55,165 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:58:55,205 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:59:03,722 [TB-Scheduling-12] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:59:13,697 [TB-Scheduling-1] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 13:59:13,723 [TB-Scheduling-16] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:59:23,721 [TB-Scheduling-9] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:59:33,722 [TB-Scheduling-7] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:59:35,162 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:59:35,203 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 13:59:43,724 [TB-Scheduling-6] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:59:53,722 [TB-Scheduling-16] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [1], dynamicQueryInvocationTime = [5], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 13:59:55,159 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 13:59:55,200 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:00:03,723 [TB-Scheduling-9] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:00:13,692 [TB-Scheduling-1] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:00:13,724 [TB-Scheduling-4] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:00:23,722 [TB-Scheduling-11] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:00:33,725 [TB-Scheduling-13] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:00:43,726 [TB-Scheduling-3] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:00:45,156 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:00:45,197 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:00:53,725 [TB-Scheduling-6] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [1], dynamicQueryInvocationTime = [4], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:00:55,154 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 14:00:55,194 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 14:01:03,726 [TB-Scheduling-11] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:01:13,688 [TB-Scheduling-10] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:01:13,727 [TB-Scheduling-4] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:01:23,726 [TB-Scheduling-5] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:01:33,727 [TB-Scheduling-14] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:01:43,728 [TB-Scheduling-10] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:01:45,151 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:01:45,192 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:01:53,726 [TB-Scheduling-4] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [1], dynamicQueryInvocationTime = [5], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:01:55,148 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:01:55,189 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:02:03,727 [TB-Scheduling-5] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:02:13,683 [TB-Scheduling-7] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:02:13,728 [TB-Scheduling-15] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:02:23,727 [TB-Scheduling-8] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:02:33,728 [TB-Scheduling-12] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:02:43,730 [TB-Scheduling-7] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:02:45,146 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:02:45,187 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:02:53,728 [TB-Scheduling-15] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [1], dynamicQueryInvocationTime = [4], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:02:55,143 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:02:55,184 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:03:03,730 [TB-Scheduling-8] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:03:13,679 [TB-Scheduling-2] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:03:13,731 [TB-Scheduling-10] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:03:23,730 [TB-Scheduling-4] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:03:45,142 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:03:45,181 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:03:53,738 [TB-Scheduling-10] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [1], regularQueryInvocationTime = [61], dynamicQueryCnt = [1] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:03:55,132 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [5] totalSaved [5] totalFailed [0]
+2025-11-30 14:03:55,172 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [5] totalSaved [5] totalFailed [0]
+2025-11-30 14:04:13,418 [TB-Scheduling-5] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - Total timing statistics below:
+2025-11-30 14:04:13,421 [TB-Scheduling-5] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: calls: 4, failures: 0, exec time: 430 
+2025-11-30 14:04:13,423 [TB-Scheduling-5] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5] Top 3 methods by timing:
+2025-11-30 14:04:13,427 [TB-Scheduling-5] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaDeviceProfileDao.findDeviceProfiles(..), calls: 1, failures: 0, exec time: 172
+2025-11-30 14:04:13,428 [TB-Scheduling-5] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaDeviceProfileDao.findDeviceProfileInfos(..), calls: 1, failures: 0, exec time: 112
+2025-11-30 14:04:13,428 [TB-Scheduling-5] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaDeviceProfileDao.findDefaultDeviceProfile(..), calls: 1, failures: 0, exec time: 98
+2025-11-30 14:04:13,670 [TB-Scheduling-14] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:04:45,136 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:04:45,176 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:04:55,132 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:04:55,173 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:05:13,675 [TB-Scheduling-13] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:05:45,130 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:05:45,170 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:05:55,127 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:05:55,167 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:06:13,675 [TB-Scheduling-14] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:06:37,309 [JpaExecutorService-0-18] INFO  o.t.s.d.s.i.s.SqlPartitioningRepository - Saving partition 1764201600000-1764806400000 for table audit_log
+2025-11-30 14:06:45,125 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:06:45,165 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:06:55,122 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:06:55,162 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:07:13,425 [TB-Scheduling-7] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - Total timing statistics below:
+2025-11-30 14:07:13,426 [TB-Scheduling-8] INFO  o.t.s.s.queue.EdgeConsumerStats - Edge Stats: totalMsgs = [1] edgeNfs = [1] coreNfEdgeHPUpd = [0] coreNfEdgeUpd = [0] coreNfEdgeSyncReq = [0] coreNfEdgeSyncResp = [0] coreNfEdgeCompLfcl = [0] 
+2025-11-30 14:07:13,426 [TB-Scheduling-4] INFO  o.t.s.s.queue.TbCoreConsumerStats - Core Stats: totalMsgs = [1] sessionEvents = [0] getAttr = [0] subToAttr = [0] subToRpc = [0] toDevRpc = [0] subInfo = [0] claimDevice = [0] deviceState = [0] subMsgs = [0] deviceConnect = [0] deviceActivity = [0] deviceDisconnect = [0] deviceInactivity = [0] deviceInactivityTimeoutUpdate = [0] coreNfOther = [0] coreNfCompLfcl = [1] coreNfDevRpcRsp = [0] coreNfNfRlProc = [0] coreNfQueueUpd = [0] coreNfQueueDel = [0] coreNfSubSvc = [0] coreNfSubMgr = [0] coreNfVCRsp = [0] 
+2025-11-30 14:07:13,427 [TB-Scheduling-7] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: calls: 10, failures: 0, exec time: 1139 
+2025-11-30 14:07:13,428 [TB-Scheduling-7] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5] Top 3 methods by timing:
+2025-11-30 14:07:13,429 [TB-Scheduling-7] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaAbstractDao.existsById(..), calls: 1, failures: 0, exec time: 579
+2025-11-30 14:07:13,429 [TB-Scheduling-7] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaAbstractDao.saveAndFlush(..), calls: 1, failures: 0, exec time: 142
+2025-11-30 14:07:13,430 [TB-Scheduling-7] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaEdgeDao.findEdgesByTenantId(..), calls: 1, failures: 0, exec time: 132
+2025-11-30 14:07:13,668 [TB-Scheduling-9] INFO  o.t.s.s.q.TbRuleEngineConsumerStats - [Main] Stats: totalMsgs = [1] successfulMsgs = [1] timeoutMsgs = [0] failedMsgs = [0] tmpTimeout = [0] tmpFailed = [0] successfulIterations = [1] failedIterations = [0] 
+2025-11-30 14:07:13,681 [TB-Scheduling-5] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:07:15,122 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 14:07:15,162 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 14:07:45,119 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:07:45,160 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:07:55,117 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:07:55,157 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:08:13,677 [TB-Scheduling-9] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:08:23,936 [NotificationExecutorService-0-23] INFO  o.t.s.d.s.i.s.SqlPartitioningRepository - Saving partition 1764201600000-1764806400000 for table notification
+2025-11-30 14:08:24,343 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [Attributes] queueSize [0] totalAdded [1] totalSaved [1] totalFailed [0]
+2025-11-30 14:08:44,343 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [Attributes] queueSize [0] totalAdded [2] totalSaved [2] totalFailed [0]
+2025-11-30 14:08:45,114 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:08:45,114 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [TS] queueSize [0] totalAdded [1] totalSaved [1] totalFailed [0]
+2025-11-30 14:08:45,154 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:08:45,155 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [TS Latest] queueSize [0] totalAdded [1] totalSaved [1] totalFailed [0]
+2025-11-30 14:08:55,111 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [16] totalSaved [16] totalFailed [0]
+2025-11-30 14:08:55,152 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [16] totalSaved [16] totalFailed [0]
+2025-11-30 14:09:13,419 [TB-Scheduling-16] INFO  o.t.s.s.queue.TbCoreConsumerStats - Core Stats: totalMsgs = [2] sessionEvents = [0] getAttr = [0] subToAttr = [0] subToRpc = [0] toDevRpc = [0] subInfo = [1] claimDevice = [0] deviceState = [1] subMsgs = [0] deviceConnect = [0] deviceActivity = [0] deviceDisconnect = [0] deviceInactivity = [0] deviceInactivityTimeoutUpdate = [0] coreNfOther = [0] coreNfCompLfcl = [0] coreNfDevRpcRsp = [0] coreNfNfRlProc = [0] coreNfQueueUpd = [0] coreNfQueueDel = [0] coreNfSubSvc = [0] coreNfSubMgr = [0] coreNfVCRsp = [0] 
+2025-11-30 14:09:13,419 [TB-Scheduling-8] INFO  o.t.s.s.queue.EdgeConsumerStats - Edge Stats: totalMsgs = [1] edgeNfs = [1] coreNfEdgeHPUpd = [0] coreNfEdgeUpd = [0] coreNfEdgeSyncReq = [0] coreNfEdgeSyncResp = [0] coreNfEdgeCompLfcl = [0] 
+2025-11-30 14:09:13,424 [TB-Scheduling-16] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - Total timing statistics below:
+2025-11-30 14:09:13,425 [TB-Scheduling-16] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: calls: 23, failures: 0, exec time: 3666 
+2025-11-30 14:09:13,426 [TB-Scheduling-16] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5] Top 3 methods by timing:
+2025-11-30 14:09:13,427 [TB-Scheduling-16] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaAbstractDao.findById(..), calls: 2, failures: 0, exec time: 1557
+2025-11-30 14:09:13,428 [TB-Scheduling-16] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaAttributeDao.find(..), calls: 1, failures: 0, exec time: 634
+2025-11-30 14:09:13,428 [TB-Scheduling-16] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaAbstractDao.save(..), calls: 3, failures: 0, exec time: 413
+2025-11-30 14:09:13,668 [TB-Scheduling-4] INFO  o.t.s.s.q.TbRuleEngineConsumerStats - [Main] Stats: totalMsgs = [3] successfulMsgs = [3] timeoutMsgs = [0] failedMsgs = [0] tmpTimeout = [0] tmpFailed = [0] successfulIterations = [3] failedIterations = [0] 
+2025-11-30 14:09:13,674 [TB-Scheduling-11] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:09:15,111 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 14:09:15,152 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 14:09:55,101 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [11] totalSaved [11] totalFailed [0]
+2025-11-30 14:09:55,141 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [11] totalSaved [11] totalFailed [0]
+2025-11-30 14:10:13,412 [TB-Scheduling-15] INFO  o.t.s.s.queue.TbCoreConsumerStats - Core Stats: totalMsgs = [1] sessionEvents = [0] getAttr = [0] subToAttr = [0] subToRpc = [0] toDevRpc = [0] subInfo = [1] claimDevice = [0] deviceState = [0] subMsgs = [0] deviceConnect = [0] deviceActivity = [0] deviceDisconnect = [0] deviceInactivity = [0] deviceInactivityTimeoutUpdate = [0] coreNfOther = [0] coreNfCompLfcl = [0] coreNfDevRpcRsp = [0] coreNfNfRlProc = [0] coreNfQueueUpd = [0] coreNfQueueDel = [0] coreNfSubSvc = [0] coreNfSubMgr = [0] coreNfVCRsp = [0] 
+2025-11-30 14:10:13,420 [TB-Scheduling-16] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - Total timing statistics below:
+2025-11-30 14:10:13,424 [TB-Scheduling-16] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: calls: 3, failures: 0, exec time: 263 
+2025-11-30 14:10:13,424 [TB-Scheduling-16] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5] Top 3 methods by timing:
+2025-11-30 14:10:13,425 [TB-Scheduling-16] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaDeviceDao.findDeviceInfoById(..), calls: 1, failures: 0, exec time: 214
+2025-11-30 14:10:13,425 [TB-Scheduling-16] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaDeviceCredentialsDao.findByDeviceId(..), calls: 1, failures: 0, exec time: 32
+2025-11-30 14:10:13,425 [TB-Scheduling-16] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaAttributeDao.save(..), calls: 1, failures: 0, exec time: 17
+2025-11-30 14:10:13,662 [TB-Scheduling-4] INFO  o.t.s.s.q.TbRuleEngineConsumerStats - [Main] Stats: totalMsgs = [1] successfulMsgs = [1] timeoutMsgs = [0] failedMsgs = [0] tmpTimeout = [0] tmpFailed = [0] successfulIterations = [1] failedIterations = [0] 
+2025-11-30 14:10:13,665 [TB-Scheduling-11] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:10:14,330 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [Attributes] queueSize [0] totalAdded [1] totalSaved [1] totalFailed [0]
+2025-11-30 14:10:15,100 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 14:10:15,101 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [TS] queueSize [0] totalAdded [1] totalSaved [1] totalFailed [0]
+2025-11-30 14:10:15,141 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 14:10:15,141 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [TS Latest] queueSize [0] totalAdded [1] totalSaved [1] totalFailed [0]
+2025-11-30 14:10:24,334 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [Attributes] queueSize [0] totalAdded [3] totalSaved [3] totalFailed [0]
+2025-11-30 14:10:25,103 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [TS] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 14:10:25,144 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [TS Latest] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 14:10:33,787 [TB-Scheduling-1] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [18], regularQueryInvocationTime = [320], dynamicQueryCnt = [6] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:10:43,790 [TB-Scheduling-8] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [6], regularQueryInvocationTime = [8], dynamicQueryCnt = [6] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:10:53,789 [TB-Scheduling-9] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [1], regularQueryInvocationTime = [18], dynamicQueryCnt = [6] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:10:55,101 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [23] totalSaved [23] totalFailed [0]
+2025-11-30 14:10:55,141 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [23] totalSaved [23] totalFailed [0]
+2025-11-30 14:11:03,790 [TB-Scheduling-3] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [6] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:11:13,415 [TB-Scheduling-15] INFO  o.t.s.s.queue.TbCoreConsumerStats - Core Stats: totalMsgs = [6] sessionEvents = [0] getAttr = [0] subToAttr = [0] subToRpc = [0] toDevRpc = [0] subInfo = [6] claimDevice = [0] deviceState = [0] subMsgs = [0] deviceConnect = [0] deviceActivity = [0] deviceDisconnect = [0] deviceInactivity = [0] deviceInactivityTimeoutUpdate = [0] coreNfOther = [0] coreNfCompLfcl = [0] coreNfDevRpcRsp = [0] coreNfNfRlProc = [0] coreNfQueueUpd = [0] coreNfQueueDel = [0] coreNfSubSvc = [0] coreNfSubMgr = [0] coreNfVCRsp = [0] 
+2025-11-30 14:11:13,427 [TB-Scheduling-1] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - Total timing statistics below:
+2025-11-30 14:11:13,428 [TB-Scheduling-1] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: calls: 23, failures: 0, exec time: 5328 
+2025-11-30 14:11:13,428 [TB-Scheduling-1] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5] Top 3 methods by timing:
+2025-11-30 14:11:13,429 [TB-Scheduling-1] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaAssetDao.countByTenantId(..), calls: 1, failures: 0, exec time: 4018
+2025-11-30 14:11:13,429 [TB-Scheduling-1] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaCustomerDao.countByTenantId(..), calls: 1, failures: 0, exec time: 616
+2025-11-30 14:11:13,430 [TB-Scheduling-1] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaAlarmDao.countAlarmsByQuery(..), calls: 6, failures: 0, exec time: 250
+2025-11-30 14:11:13,667 [TB-Scheduling-8] INFO  o.t.s.s.q.TbRuleEngineConsumerStats - [Main] Stats: totalMsgs = [6] successfulMsgs = [6] timeoutMsgs = [0] failedMsgs = [0] tmpTimeout = [0] tmpFailed = [0] successfulIterations = [6] failedIterations = [0] 
+2025-11-30 14:11:13,668 [TB-Scheduling-4] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:11:13,791 [TB-Scheduling-11] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [6] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:11:15,101 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 14:11:15,141 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 14:11:23,788 [TB-Scheduling-14] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [6] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:11:33,788 [TB-Scheduling-10] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [6] dynamicQueryInvocationCnt = [0], dynamicQueryInvocationTime = [0], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:11:43,789 [TB-Scheduling-2] INFO  o.t.s.s.s.DefaultTbEntityDataSubscriptionService - Stats: regularQueryInvocationCnt = [0], regularQueryInvocationTime = [0], dynamicQueryCnt = [6] dynamicQueryInvocationCnt = [6], dynamicQueryInvocationTime = [18], alarmQueryInvocationCnt = [0], alarmQueryInvocationTime = [0]
+2025-11-30 14:11:55,094 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [13] totalSaved [13] totalFailed [0]
+2025-11-30 14:11:55,134 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [13] totalSaved [13] totalFailed [0]
+2025-11-30 14:12:13,432 [TB-Scheduling-6] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - Total timing statistics below:
+2025-11-30 14:12:13,432 [TB-Scheduling-6] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: calls: 5, failures: 0, exec time: 46 
+2025-11-30 14:12:13,433 [TB-Scheduling-6] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5] Top 3 methods by timing:
+2025-11-30 14:12:13,433 [TB-Scheduling-6] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaDeviceDao.findDeviceInfoById(..), calls: 1, failures: 0, exec time: 21
+2025-11-30 14:12:13,433 [TB-Scheduling-6] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaDeviceCredentialsDao.findByDeviceId(..), calls: 1, failures: 0, exec time: 16
+2025-11-30 14:12:13,433 [TB-Scheduling-6] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaAlarmDao.countAlarmsByQuery(..), calls: 3, failures: 0, exec time: 9
+2025-11-30 14:12:13,663 [TB-Scheduling-2] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:12:44,322 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [Attributes] queueSize [0] totalAdded [1] totalSaved [1] totalFailed [0]
+2025-11-30 14:12:45,093 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [TS] queueSize [0] totalAdded [1] totalSaved [1] totalFailed [0]
+2025-11-30 14:12:45,134 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [TS Latest] queueSize [0] totalAdded [1] totalSaved [1] totalFailed [0]
+2025-11-30 14:12:55,090 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [23] totalSaved [23] totalFailed [0]
+2025-11-30 14:12:55,130 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [23] totalSaved [23] totalFailed [0]
+2025-11-30 14:13:13,405 [TB-Scheduling-16] INFO  o.t.s.s.queue.TbCoreConsumerStats - Core Stats: totalMsgs = [1] sessionEvents = [0] getAttr = [0] subToAttr = [0] subToRpc = [0] toDevRpc = [0] subInfo = [1] claimDevice = [0] deviceState = [0] subMsgs = [0] deviceConnect = [0] deviceActivity = [0] deviceDisconnect = [0] deviceInactivity = [0] deviceInactivityTimeoutUpdate = [0] coreNfOther = [0] coreNfCompLfcl = [0] coreNfDevRpcRsp = [0] coreNfNfRlProc = [0] coreNfQueueUpd = [0] coreNfQueueDel = [0] coreNfSubSvc = [0] coreNfSubMgr = [0] coreNfVCRsp = [0] 
+2025-11-30 14:13:13,430 [TB-Scheduling-10] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - Total timing statistics below:
+2025-11-30 14:13:13,431 [TB-Scheduling-10] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: calls: 1, failures: 0, exec time: 9 
+2025-11-30 14:13:13,431 [TB-Scheduling-10] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5] Top 3 methods by timing:
+2025-11-30 14:13:13,431 [TB-Scheduling-10] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaAttributeDao.save(..), calls: 1, failures: 0, exec time: 9
+2025-11-30 14:13:13,667 [TB-Scheduling-6] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:13:13,668 [TB-Scheduling-2] INFO  o.t.s.s.q.TbRuleEngineConsumerStats - [Main] Stats: totalMsgs = [1] successfulMsgs = [1] timeoutMsgs = [0] failedMsgs = [0] tmpTimeout = [0] tmpFailed = [0] successfulIterations = [1] failedIterations = [0] 
+2025-11-30 14:13:15,090 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 14:13:15,130 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 14:13:55,085 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [11] totalSaved [11] totalFailed [0]
+2025-11-30 14:13:55,125 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [11] totalSaved [11] totalFailed [0]
+2025-11-30 14:14:13,668 [TB-Scheduling-16] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:14:55,079 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [11] totalSaved [11] totalFailed [0]
+2025-11-30 14:14:55,120 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [11] totalSaved [11] totalFailed [0]
+2025-11-30 14:15:13,667 [TB-Scheduling-12] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:15:44,304 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [Attributes] queueSize [0] totalAdded [1] totalSaved [1] totalFailed [0]
+2025-11-30 14:15:45,075 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [TS] queueSize [0] totalAdded [1] totalSaved [1] totalFailed [0]
+2025-11-30 14:15:45,116 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [TS Latest] queueSize [0] totalAdded [1] totalSaved [1] totalFailed [0]
+2025-11-30 14:15:55,073 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [23] totalSaved [23] totalFailed [0]
+2025-11-30 14:15:55,114 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [23] totalSaved [23] totalFailed [0]
+2025-11-30 14:16:04,303 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [Attributes] queueSize [0] totalAdded [1] totalSaved [1] totalFailed [0]
+2025-11-30 14:16:05,073 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [TS] queueSize [0] totalAdded [1] totalSaved [1] totalFailed [0]
+2025-11-30 14:16:05,114 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [TS Latest] queueSize [0] totalAdded [1] totalSaved [1] totalFailed [0]
+2025-11-30 14:16:13,394 [TB-Scheduling-5] INFO  o.t.s.s.queue.TbCoreConsumerStats - Core Stats: totalMsgs = [2] sessionEvents = [0] getAttr = [0] subToAttr = [0] subToRpc = [0] toDevRpc = [0] subInfo = [2] claimDevice = [0] deviceState = [0] subMsgs = [0] deviceConnect = [0] deviceActivity = [0] deviceDisconnect = [0] deviceInactivity = [0] deviceInactivityTimeoutUpdate = [0] coreNfOther = [0] coreNfCompLfcl = [0] coreNfDevRpcRsp = [0] coreNfNfRlProc = [0] coreNfQueueUpd = [0] coreNfQueueDel = [0] coreNfSubSvc = [0] coreNfSubMgr = [0] coreNfVCRsp = [0] 
+2025-11-30 14:16:13,421 [TB-Scheduling-9] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - Total timing statistics below:
+2025-11-30 14:16:13,424 [TB-Scheduling-9] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: calls: 2, failures: 0, exec time: 50 
+2025-11-30 14:16:13,424 [TB-Scheduling-9] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5] Top 3 methods by timing:
+2025-11-30 14:16:13,425 [TB-Scheduling-9] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaAttributeDao.save(..), calls: 2, failures: 0, exec time: 50
+2025-11-30 14:16:13,662 [TB-Scheduling-14] INFO  o.t.s.s.q.TbRuleEngineConsumerStats - [Main] Stats: totalMsgs = [2] successfulMsgs = [2] timeoutMsgs = [0] failedMsgs = [0] tmpTimeout = [0] tmpFailed = [0] successfulIterations = [2] failedIterations = [0] 
+2025-11-30 14:16:13,666 [TB-Scheduling-10] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:16:15,073 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 14:16:15,114 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 14:16:55,067 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [23] totalSaved [23] totalFailed [0]
+2025-11-30 14:16:55,106 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [23] totalSaved [23] totalFailed [0]
+2025-11-30 14:17:13,663 [TB-Scheduling-14] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:17:34,294 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [Attributes] queueSize [0] totalAdded [1] totalSaved [1] totalFailed [0]
+2025-11-30 14:17:35,064 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [TS] queueSize [0] totalAdded [1] totalSaved [1] totalFailed [0]
+2025-11-30 14:17:35,105 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [TS Latest] queueSize [0] totalAdded [1] totalSaved [1] totalFailed [0]
+2025-11-30 14:17:55,062 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [23] totalSaved [23] totalFailed [0]
+2025-11-30 14:17:55,102 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [23] totalSaved [23] totalFailed [0]
+2025-11-30 14:18:13,386 [TB-Scheduling-13] INFO  o.t.s.s.queue.TbCoreConsumerStats - Core Stats: totalMsgs = [1] sessionEvents = [0] getAttr = [0] subToAttr = [0] subToRpc = [0] toDevRpc = [0] subInfo = [1] claimDevice = [0] deviceState = [0] subMsgs = [0] deviceConnect = [0] deviceActivity = [0] deviceDisconnect = [0] deviceInactivity = [0] deviceInactivityTimeoutUpdate = [0] coreNfOther = [0] coreNfCompLfcl = [0] coreNfDevRpcRsp = [0] coreNfNfRlProc = [0] coreNfQueueUpd = [0] coreNfQueueDel = [0] coreNfSubSvc = [0] coreNfSubMgr = [0] coreNfVCRsp = [0] 
+2025-11-30 14:18:13,417 [TB-Scheduling-5] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - Total timing statistics below:
+2025-11-30 14:18:13,420 [TB-Scheduling-5] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: calls: 1, failures: 0, exec time: 10 
+2025-11-30 14:18:13,421 [TB-Scheduling-5] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5] Top 3 methods by timing:
+2025-11-30 14:18:13,421 [TB-Scheduling-5] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaAttributeDao.save(..), calls: 1, failures: 0, exec time: 10
+2025-11-30 14:18:13,660 [TB-Scheduling-3] INFO  o.t.s.s.q.TbRuleEngineConsumerStats - [Main] Stats: totalMsgs = [1] successfulMsgs = [1] timeoutMsgs = [0] failedMsgs = [0] tmpTimeout = [0] tmpFailed = [0] successfulIterations = [1] failedIterations = [0] 
+2025-11-30 14:18:13,661 [TB-Scheduling-9] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:18:15,062 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 14:18:15,102 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 14:18:55,054 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [11] totalSaved [11] totalFailed [0]
+2025-11-30 14:18:55,095 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [11] totalSaved [11] totalFailed [0]
+2025-11-30 14:19:13,655 [TB-Scheduling-13] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:19:55,048 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:19:55,088 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:20:05,048 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:20:05,088 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:20:13,650 [TB-Scheduling-13] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:20:55,042 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:20:55,083 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:21:05,042 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:21:05,082 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:21:13,646 [TB-Scheduling-8] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:21:55,035 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:21:55,076 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:22:05,035 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:22:05,076 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:22:13,641 [TB-Scheduling-4] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:22:55,029 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:22:55,069 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:23:05,029 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:23:05,069 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:23:13,637 [TB-Scheduling-11] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:23:24,256 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [Attributes] queueSize [0] totalAdded [1] totalSaved [1] totalFailed [0]
+2025-11-30 14:23:25,027 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [TS] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 14:23:25,068 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [TS Latest] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 14:23:55,023 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [16] totalSaved [16] totalFailed [0]
+2025-11-30 14:23:55,063 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [16] totalSaved [16] totalFailed [0]
+2025-11-30 14:24:05,023 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:24:05,063 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:24:13,354 [TB-Scheduling-12] INFO  o.t.s.s.queue.TbCoreConsumerStats - Core Stats: totalMsgs = [3] sessionEvents = [0] getAttr = [0] subToAttr = [0] subToRpc = [0] toDevRpc = [0] subInfo = [3] claimDevice = [0] deviceState = [0] subMsgs = [0] deviceConnect = [0] deviceActivity = [0] deviceDisconnect = [0] deviceInactivity = [0] deviceInactivityTimeoutUpdate = [0] coreNfOther = [0] coreNfCompLfcl = [0] coreNfDevRpcRsp = [0] coreNfNfRlProc = [0] coreNfQueueUpd = [0] coreNfQueueDel = [0] coreNfSubSvc = [0] coreNfSubMgr = [0] coreNfVCRsp = [0] 
+2025-11-30 14:24:13,391 [TB-Scheduling-15] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - Total timing statistics below:
+2025-11-30 14:24:13,394 [TB-Scheduling-15] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: calls: 1, failures: 0, exec time: 11 
+2025-11-30 14:24:13,394 [TB-Scheduling-15] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5] Top 3 methods by timing:
+2025-11-30 14:24:13,395 [TB-Scheduling-15] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaAttributeDao.save(..), calls: 1, failures: 0, exec time: 11
+2025-11-30 14:24:13,634 [TB-Scheduling-2] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:24:13,638 [TB-Scheduling-11] INFO  o.t.s.s.q.TbRuleEngineConsumerStats - [Main] Stats: totalMsgs = [3] successfulMsgs = [3] timeoutMsgs = [0] failedMsgs = [0] tmpTimeout = [0] tmpFailed = [0] successfulIterations = [1] failedIterations = [0] 
+2025-11-30 14:24:15,023 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 14:24:15,063 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 14:24:55,017 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:24:55,058 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:25:04,247 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [Attributes] queueSize [0] totalAdded [1] totalSaved [1] totalFailed [0]
+2025-11-30 14:25:05,017 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:25:05,018 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [TS] queueSize [0] totalAdded [2] totalSaved [2] totalFailed [0]
+2025-11-30 14:25:05,058 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:25:05,062 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [TS Latest] queueSize [0] totalAdded [2] totalSaved [2] totalFailed [0]
+2025-11-30 14:25:13,350 [TB-Scheduling-10] INFO  o.t.s.s.queue.TbCoreConsumerStats - Core Stats: totalMsgs = [1] sessionEvents = [0] getAttr = [0] subToAttr = [0] subToRpc = [0] toDevRpc = [0] subInfo = [1] claimDevice = [0] deviceState = [0] subMsgs = [0] deviceConnect = [0] deviceActivity = [0] deviceDisconnect = [0] deviceInactivity = [0] deviceInactivityTimeoutUpdate = [0] coreNfOther = [0] coreNfCompLfcl = [0] coreNfDevRpcRsp = [0] coreNfNfRlProc = [0] coreNfQueueUpd = [0] coreNfQueueDel = [0] coreNfSubSvc = [0] coreNfSubMgr = [0] coreNfVCRsp = [0] 
+2025-11-30 14:25:13,390 [TB-Scheduling-14] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - Total timing statistics below:
+2025-11-30 14:25:13,392 [TB-Scheduling-14] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: calls: 1, failures: 0, exec time: 6 
+2025-11-30 14:25:13,392 [TB-Scheduling-14] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5] Top 3 methods by timing:
+2025-11-30 14:25:13,392 [TB-Scheduling-14] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaAttributeDao.save(..), calls: 1, failures: 0, exec time: 6
+2025-11-30 14:25:13,637 [TB-Scheduling-15] INFO  o.t.s.s.q.TbRuleEngineConsumerStats - [Main] Stats: totalMsgs = [1] successfulMsgs = [1] timeoutMsgs = [0] failedMsgs = [0] tmpTimeout = [0] tmpFailed = [0] successfulIterations = [1] failedIterations = [0] 
+2025-11-30 14:25:13,630 [TB-Scheduling-12] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:25:15,017 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 14:25:15,058 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 14:25:55,011 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [16] totalSaved [16] totalFailed [0]
+2025-11-30 14:25:55,052 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [16] totalSaved [16] totalFailed [0]
+2025-11-30 14:26:04,241 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [Attributes] queueSize [0] totalAdded [1] totalSaved [1] totalFailed [0]
+2025-11-30 14:26:05,011 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:26:05,012 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:26:05,052 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:26:05,052 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:26:13,349 [TB-Scheduling-5] INFO  o.t.s.s.queue.TbCoreConsumerStats - Core Stats: totalMsgs = [2] sessionEvents = [0] getAttr = [0] subToAttr = [0] subToRpc = [0] toDevRpc = [0] subInfo = [2] claimDevice = [0] deviceState = [0] subMsgs = [0] deviceConnect = [0] deviceActivity = [0] deviceDisconnect = [0] deviceInactivity = [0] deviceInactivityTimeoutUpdate = [0] coreNfOther = [0] coreNfCompLfcl = [0] coreNfDevRpcRsp = [0] coreNfNfRlProc = [0] coreNfQueueUpd = [0] coreNfQueueDel = [0] coreNfSubSvc = [0] coreNfSubMgr = [0] coreNfVCRsp = [0] 
+2025-11-30 14:26:13,387 [TB-Scheduling-6] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - Total timing statistics below:
+2025-11-30 14:26:13,388 [TB-Scheduling-6] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: calls: 1, failures: 0, exec time: 22 
+2025-11-30 14:26:13,389 [TB-Scheduling-6] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5] Top 3 methods by timing:
+2025-11-30 14:26:13,389 [TB-Scheduling-6] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaAttributeDao.save(..), calls: 1, failures: 0, exec time: 22
+2025-11-30 14:26:13,635 [TB-Scheduling-15] INFO  o.t.s.s.q.TbRuleEngineConsumerStats - [Main] Stats: totalMsgs = [2] successfulMsgs = [2] timeoutMsgs = [0] failedMsgs = [0] tmpTimeout = [0] tmpFailed = [0] successfulIterations = [1] failedIterations = [0] 
+2025-11-30 14:26:13,636 [TB-Scheduling-14] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:26:15,011 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 14:26:15,052 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [6] totalSaved [6] totalFailed [0]
+2025-11-30 14:26:55,005 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [16] totalSaved [16] totalFailed [0]
+2025-11-30 14:26:55,045 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [16] totalSaved [16] totalFailed [0]
+2025-11-30 14:27:05,005 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:27:05,045 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:27:13,639 [TB-Scheduling-6] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:27:54,999 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:27:55,039 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:28:04,998 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:28:05,039 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:28:13,642 [TB-Scheduling-5] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:28:54,993 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:28:55,034 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:29:04,993 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:29:05,034 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:29:13,638 [TB-Scheduling-9] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:29:54,987 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:29:55,028 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:30:13,633 [TB-Scheduling-3] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:30:14,987 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:30:15,028 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:30:54,982 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:30:55,022 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:31:13,629 [TB-Scheduling-9] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:31:14,982 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:31:15,022 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:31:54,976 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:31:55,016 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:32:13,624 [TB-Scheduling-7] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:32:14,976 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:32:15,016 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:32:54,969 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:32:55,009 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:33:13,621 [TB-Scheduling-4] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:33:14,969 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:33:15,009 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:33:54,965 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:33:55,003 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:34:13,619 [TB-Scheduling-4] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:34:14,963 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:34:15,003 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:34:54,957 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:34:54,998 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:35:13,616 [TB-Scheduling-15] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:35:14,958 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:35:14,998 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:35:54,952 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:35:54,992 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:36:13,613 [TB-Scheduling-8] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:36:14,952 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:36:14,992 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:36:24,178 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-2 [Attributes] queueSize [0] totalAdded [2] totalSaved [2] totalFailed [0]
+2025-11-30 14:36:54,946 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:36:54,986 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:37:13,342 [TB-Scheduling-7] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - Total timing statistics below:
+2025-11-30 14:37:13,350 [TB-Scheduling-7] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: calls: 2, failures: 0, exec time: 73 
+2025-11-30 14:37:13,351 [TB-Scheduling-7] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5] Top 3 methods by timing:
+2025-11-30 14:37:13,351 [TB-Scheduling-7] INFO  o.t.s.dao.aspect.SqlDaoCallsAspect - [5489b160-ccf1-11f0-81f3-0bf1425738f5]: method: JpaAttributeDao.save(..), calls: 2, failures: 0, exec time: 73
+2025-11-30 14:37:13,607 [TB-Scheduling-14] INFO  o.t.s.s.q.TbRuleEngineConsumerStats - [Main] Stats: totalMsgs = [1] successfulMsgs = [1] timeoutMsgs = [0] failedMsgs = [0] tmpTimeout = [0] tmpFailed = [0] successfulIterations = [1] failedIterations = [0] 
+2025-11-30 14:37:13,608 [TB-Scheduling-12] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:37:14,946 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [13] totalSaved [13] totalFailed [0]
+2025-11-30 14:37:14,986 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [13] totalSaved [13] totalFailed [0]
+2025-11-30 14:37:54,940 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:37:54,981 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:38:13,603 [TB-Scheduling-1] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:38:14,940 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:38:14,981 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:38:54,934 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:38:54,975 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:39:13,599 [TB-Scheduling-1] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:39:14,934 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [6] totalAdded [7] totalSaved [1] totalFailed [0]
+2025-11-30 14:39:14,975 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:39:24,932 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [0] totalSaved [6] totalFailed [0]
+2025-11-30 14:39:54,929 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:39:54,970 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:39:56,282 [subscription-scheduler-24-thread-1] INFO  o.t.s.s.s.DefaultSubscriptionManagerService - Removed 0 old entity update records.
+2025-11-30 14:40:13,595 [TB-Scheduling-1] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:40:18,285 [tenant-dispatcher-0-1] INFO  o.t.s.d.s.i.s.SqlPartitioningRepository - Saving partition 1764201600000-1764806400000 for table stats_event
+2025-11-30 14:40:22,001 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-0 [Events] queueSize [0] totalAdded [1] totalSaved [1] totalFailed [0]
+2025-11-30 14:40:22,002 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [Events] queueSize [0] totalAdded [3] totalSaved [3] totalFailed [0]
+2025-11-30 14:40:24,926 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:40:24,967 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:40:54,924 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:40:54,964 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:41:13,591 [TB-Scheduling-2] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:41:24,921 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:41:24,962 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:41:54,918 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:41:54,959 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:42:13,598 [TB-Scheduling-3] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:42:24,916 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:42:24,956 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:42:54,913 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:42:54,954 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:43:13,595 [TB-Scheduling-5] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:43:24,911 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:43:24,951 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:43:54,908 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:43:54,950 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:44:13,592 [TB-Scheduling-2] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:44:24,905 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:44:24,946 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:44:54,903 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:44:54,944 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:45:13,587 [TB-Scheduling-16] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:45:24,901 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:45:24,942 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:45:54,899 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:45:54,939 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:46:13,585 [TB-Scheduling-8] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:46:24,896 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:46:24,936 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:46:54,893 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:46:54,934 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:47:13,581 [TB-Scheduling-4] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:47:24,891 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:47:24,932 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:47:54,888 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:47:54,929 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:48:13,578 [TB-Scheduling-4] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:48:24,886 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:48:24,927 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:48:54,883 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:48:54,923 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:49:13,573 [TB-Scheduling-13] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]
+2025-11-30 14:49:24,922 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:49:34,881 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [7] totalSaved [7] totalFailed [0]
+2025-11-30 14:49:54,878 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:49:54,918 [sql-log-2-thread-1] INFO  o.t.s.dao.sql.TbSqlBlockingQueue - Queue-1 [TS Latest] queueSize [0] totalAdded [4] totalSaved [4] totalFailed [0]
+2025-11-30 14:50:13,578 [TB-Scheduling-13] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [0]

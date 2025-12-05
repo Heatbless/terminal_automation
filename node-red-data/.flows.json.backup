@@ -1,0 +1,151 @@
+[
+    {
+        "id": "99428a2c5c435136",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a3d0bbcef6d56a60",
+        "type": "mqtt-broker",
+        "name": "dashboard input",
+        "broker": "custom_broker",
+        "port": "1885",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "conn",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "5d1526c08d9eea76",
+        "type": "websocket-listener",
+        "path": "/ws/backup",
+        "wholemsg": "false"
+    },
+    {
+        "id": "519dbc944bdc71fe",
+        "type": "mqtt in",
+        "z": "99428a2c5c435136",
+        "name": "",
+        "topic": "/esp32/pump-switch",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "a3d0bbcef6d56a60",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 160,
+        "wires": [
+            [
+                "adad250a433b2914"
+            ]
+        ]
+    },
+    {
+        "id": "adad250a433b2914",
+        "type": "debug",
+        "z": "99428a2c5c435136",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "8ee7d60317f08802",
+        "type": "mqtt out",
+        "z": "99428a2c5c435136",
+        "name": "mqtt out",
+        "topic": "/esp32/pump-switch",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a3d0bbcef6d56a60",
+        "x": 600,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "c83a28a3d0289fb7",
+        "type": "aedes broker",
+        "z": "99428a2c5c435136",
+        "name": "backup",
+        "mqtt_port": "1885",
+        "mqtt_ws_bind": "port",
+        "mqtt_ws_port": "1886",
+        "mqtt_ws_path": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "",
+        "persistence_bind": "memory",
+        "dburl": "",
+        "usetls": false,
+        "x": 190,
+        "y": 240,
+        "wires": [
+            [],
+            [
+                "adad250a433b2914",
+                "8ee7d60317f08802",
+                "d1ebc29218523fc8"
+            ]
+        ]
+    },
+    {
+        "id": "d1ebc29218523fc8",
+        "type": "function",
+        "z": "99428a2c5c435136",
+        "name": "function 1",
+        "func": "if (msg.payload && msg.payload.packet && msg.payload.packet.payload) {\n\n    // 2. Extract the Buffer from the deep structure\n    var rawBuffer = msg.payload.packet.payload;\n\n    // 3. Convert the Buffer to a clean String (e.g. \"on\")\n    var cleanString = rawBuffer.toString();\n\n    // 4. Update the message payload\n    msg.payload = cleanString;\n\n    // Return the cleaned message\n    return msg.payload;\n\n} else {\n    // If it's not a packet (e.g., client connection event), ignore it\n    return null;\n}",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 200,
+        "wires": [
+            [
+                "adad250a433b2914"
+            ]
+        ]
+    }
+]

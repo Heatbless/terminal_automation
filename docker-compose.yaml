@@ -1,0 +1,50 @@
+services:
+  # -----------------------------
+  # ThingsBoard (Backend)
+  # -----------------------------
+  thingsboard:
+    image: thingsboard/tb-postgres
+    container_name: thingsboard_server
+    restart: always
+    ports:
+      - "0.0.0.0:9090:9090"  # Web UI / API
+      - "0.0.0.0:1883:1883"  # MQTT Port
+    environment:
+      # minimal config
+      - TB_QUEUE_TYPE=in-memory
+    volumes:
+      - ./data/tb-data:/data
+      - ./data/tb-logs:/var/log/thingsboard
+
+  mosquitto:
+    image: eclipse-mosquitto
+    container_name: custom_broker
+    ports:
+      - "1885:1885" # MQTT Protocol (TCP-IP)
+      - "9001:9001" # Websockets
+    volumes:
+      - ./mosquitto/config:/mosquitto/config
+      - ./mosquitto/data:/mosquitto/data
+
+  nodered:
+    image: nodered/node-red
+    container_name: nodered_logic
+    ports:
+      - "1880:1880" # Web app
+      - "1886:1886" # Backup MQTT Connection using Aedes
+    volumes:
+      - ./node-red-data:/data
+    depends_on:
+      - mosquitto
+
+  # -----------------------------
+  # React + Vite (Frontend)
+  # -----------------------------
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: react_frontend
+    restart: always
+    ports:
+      - "80:80"
