@@ -15,6 +15,7 @@ function Scanner() {
   const isProcessingRef = useRef(false)
   const mqttClientRef = useRef<any>(null)
   const connectionTimeoutRef = useRef<any>(null)
+  const heartbeatIntervalRef = useRef<any>(null)
   const currentUrlIndexRef = useRef(0)
   
   // MQTT configuration - use relative paths that nginx will proxy
@@ -51,7 +52,8 @@ function Scanner() {
       
       const client = mqtt.connect(currentUrl, {
         reconnectPeriod: 0,
-        connectTimeout: 5000
+        connectTimeout: 5000,
+        keepalive: 30  // Send keepalive ping every 30 seconds
       })
       
       // Set 5 second timeout
@@ -73,6 +75,20 @@ function Scanner() {
         if (connectionTimeoutRef.current) {
           clearTimeout(connectionTimeoutRef.current)
         }
+        
+        // Start heartbeat interval - publish to heartbeat topic every 20 seconds
+        if (heartbeatIntervalRef.current) {
+          clearInterval(heartbeatIntervalRef.current)
+        }
+        heartbeatIntervalRef.current = setInterval(() => {
+          if (client.connected) {
+            client.publish('/heartbeat', JSON.stringify({ 
+              timestamp: Date.now(),
+              source: 'scanner-app'
+            }), { qos: 0 })
+            console.log('Heartbeat sent')
+          }
+        }, 20000) // 20 seconds
       })
       
       client.on('error', (err) => {
@@ -83,6 +99,11 @@ function Scanner() {
       client.on('close', () => {
         console.log('MQTT connection closed')
         setMqttConnected(false)
+        // Clear heartbeat interval
+        if (heartbeatIntervalRef.current) {
+          clearInterval(heartbeatIntervalRef.current)
+          heartbeatIntervalRef.current = null
+        }
         // Only try to reconnect if connection was lost (not manually closed)
         if (mqttClientRef.current === client) {
           setTimeout(() => {
@@ -100,6 +121,9 @@ function Scanner() {
     return () => {
       if (connectionTimeoutRef.current) {
         clearTimeout(connectionTimeoutRef.current)
+      }
+      if (heartbeatIntervalRef.current) {
+        clearInterval(heartbeatIntervalRef.current)
       }
       if (scannerRef.current?.isScanning) {
         scannerRef.current.stop()
