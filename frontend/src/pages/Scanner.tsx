@@ -288,9 +288,9 @@ function Scanner() {
       <h1>QR Code Scanner</h1>
       
       {mqttConnected ? (
-        <div className="success-message">MQTT Connected</div>
+        <div className="success-message">Connected</div>
       ) : (
-        <div className="error-message">MQTT Disconnected</div>
+        <div className="error-message">Disconnected</div>
       )}
 
       {cameras.length > 1 && !scanning && (
