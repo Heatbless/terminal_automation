@@ -10,7 +10,6 @@ services:
       - "0.0.0.0:9090:9090"  # Web UI / API
       - "0.0.0.0:1883:1883"  # MQTT Port
     environment:
-      # minimal config
       - TB_QUEUE_TYPE=in-memory
     volumes:
       - ./data/tb-data:/data

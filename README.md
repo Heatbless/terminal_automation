@@ -51,8 +51,13 @@ Edit `.env` and add your Supabase configuration:
 VITE_SUPABASE_URL=https://your-project.supabase.co
 VITE_SUPABASE_ANON_KEY=your-anon-key-here
 ```
-
-### 3. Start the Services
+### 3. Permission Check
+If you are running on Linux or WSL2, files created by `git clone` or other operations sometimes have incorrect permissions for the components. Run these commands to ensure that the components run without any issue
+```bash
+cd .. #Navigate back to the root project directory
+sudo chown -R 799:799 ./data
+```
+### 4. Start the Services
 
 From the root directory (`automation/`):
 
@@ -72,7 +77,7 @@ This will start all services:
 - **Mosquitto MQTT Broker** - ports 1885, 9001
 - **Node-RED** - http://localhost:1880
 
-### 4. Access the Application
+### 5. Access the Application
 
 - **Main App**: http://localhost
   - Register page: http://localhost/

@@ -5,6 +5,7 @@ import './Admin.css'
 interface TruckRow {
   id: number
   driver_id: string
+  driver_name: string
   plate_num: string
 }
 
@@ -12,6 +13,7 @@ interface AccessRow {
   uid: string
   driver_id: string
   plate_num: string
+  pump_id: string
 }
 
 interface AccessLogRow {
@@ -19,27 +21,49 @@ interface AccessLogRow {
   uid: string
   driver_id: string
   plate_num: string
+  pump_id: string
+  created_at: string
+}
+
+interface OrderRow {
+  id: number
+  gas_type: string
+  quantity: string
+  driver_id: string
+  pump_id: string
+  created_at: string
+}
+
+interface OrderLogRow {
+  id: number
+  gas_type: string
+  quantity: string
+  driver_id: string
+  pump_id: string
   created_at: string
 }
 
 function Admin() {
-  const [activeTab, setActiveTab] = useState<'truck' | 'access' | 'access_log' | 'add'>('truck')
+  const [activeTab, setActiveTab] = useState<'truck' | 'access' | 'access_log' | 'order' | 'order_log' | 'add'>('truck')
   const [truckData, setTruckData] = useState<TruckRow[]>([])
   const [accessData, setAccessData] = useState<AccessRow[]>([])
   const [accessLogData, setAccessLogData] = useState<AccessLogRow[]>([])
+  const [orderData, setOrderData] = useState<OrderRow[]>([])
+  const [orderLogData, setOrderLogData] = useState<OrderLogRow[]>([])
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState({ type: '', text: '' })
   
   // Form for adding new truck
   const [newTruck, setNewTruck] = useState({
     driverId: '',
-    plateNumber: ''
+    driverName: '',
+    plateNumber: '',
   })
   
   // Edit modal state
   const [editModal, setEditModal] = useState<{
     show: boolean
-    table: 'truck' | 'access' | 'access_log'
+    table: 'truck' | 'access' | 'access_log' | 'order' | 'order_log'
     data: any
   }>({
     show: false,
@@ -57,6 +81,10 @@ function Admin() {
       fetchAccessData()
     } else if (activeTab === 'access_log') {
       fetchAccessLogData()
+    } else if (activeTab === 'order') {
+      fetchOrderData()
+    } else if (activeTab === 'order_log') {
+      fetchOrderLogData()
     }
   }, [activeTab])
 
@@ -120,6 +148,46 @@ function Admin() {
     }
   }
 
+  const fetchOrderData = async () => {
+    setLoading(true)
+    try {
+      const response = await axios.get(
+        `${supabaseUrl}/rest/v1/order?select=*&order=created_at.desc`,
+        {
+          headers: {
+            'apikey': supabaseKey,
+            'Authorization': `Bearer ${supabaseKey}`
+          }
+        }
+      )
+      setOrderData(response.data)
+    } catch (error: any) {
+      setMessage({ type: 'error', text: 'Failed to fetch order data: ' + error.message })
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const fetchOrderLogData = async () => {
+    setLoading(true)
+    try {
+      const response = await axios.get(
+        `${supabaseUrl}/rest/v1/order_log?select=*&order=created_at.desc`,
+        {
+          headers: {
+            'apikey': supabaseKey,
+            'Authorization': `Bearer ${supabaseKey}`
+          }
+        }
+      )
+      setOrderLogData(response.data)
+    } catch (error: any) {
+      setMessage({ type: 'error', text: 'Failed to fetch order log data: ' + error.message })
+    } finally {
+      setLoading(false)
+    }
+  }
+
   const handleAddTruck = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
@@ -147,7 +215,8 @@ function Admin() {
         `${supabaseUrl}/rest/v1/truck`,
         {
           driver_id: newTruck.driverId,
-          plate_num: newTruck.plateNumber
+          driver_name: newTruck.driverName,
+          plate_num: newTruck.plateNumber,
         },
         {
           headers: {
@@ -160,7 +229,7 @@ function Admin() {
       )
       
       setMessage({ type: 'success', text: 'Truck added successfully!' })
-      setNewTruck({ driverId: '', plateNumber: '' })
+      setNewTruck({ driverId: '', driverName: '', plateNumber: ''})
       fetchTruckData()
     } catch (error: any) {
       setMessage({ type: 'error', text: 'Failed to add truck: ' + error.message })
@@ -169,7 +238,7 @@ function Admin() {
     }
   }
 
-  const handleEdit = (table: 'truck' | 'access' | 'access_log', data: any) => {
+  const handleEdit = (table: 'truck' | 'access' | 'access_log' | 'order' | 'order_log', data: any) => {
     setEditModal({ show: true, table, data: { ...data } })
   }
 
@@ -203,6 +272,7 @@ function Admin() {
         endpoint = `${supabaseUrl}/rest/v1/truck?id=eq.${data.id}`
         updateData = {
           driver_id: data.driver_id,
+          driver_name: data.driver_name,
           plate_num: data.plate_num
         }
       } else if (table === 'access') {
@@ -232,6 +302,20 @@ function Admin() {
         endpoint = `${supabaseUrl}/rest/v1/access_log?id=eq.${data.id}`
         updateData = { ...data }
         delete updateData.id
+      } else if (table === 'order') {
+        endpoint = `${supabaseUrl}/rest/v1/order?id=eq.${data.id}`
+        updateData = {
+          gas_type: data.gas_type,
+          quantity: data.quantity,
+          driver_id: data.driver_id,
+          pump_id: data.pump_id
+        }
+      } else if (table === 'order_log') {
+        endpoint = `${supabaseUrl}/rest/v1/order_log?id=eq.${data.id}`
+        updateData = {
+          order_id: data.order_id,
+          status: data.status
+        }
       }
 
       await axios.patch(
@@ -261,7 +345,7 @@ function Admin() {
     }
   }
 
-  const handleDelete = async (table: 'truck' | 'access' | 'access_log', id: any) => {
+  const handleDelete = async (table: 'truck' | 'access' | 'access_log' | 'order' | 'order_log', id: any) => {
     if (!confirm('Are you sure you want to delete this record?')) return
 
     setLoading(true)
@@ -275,6 +359,10 @@ function Admin() {
         endpoint = `${supabaseUrl}/rest/v1/access?uid=eq.${id}`
       } else if (table === 'access_log') {
         endpoint = `${supabaseUrl}/rest/v1/access_log?id=eq.${id}`
+      } else if (table === 'order') {
+        endpoint = `${supabaseUrl}/rest/v1/order?id=eq.${id}`
+      } else if (table === 'order_log') {
+        endpoint = `${supabaseUrl}/rest/v1/order_log?id=eq.${id}`
       }
 
       await axios.delete(endpoint, {
@@ -290,6 +378,9 @@ function Admin() {
       if (table === 'truck') fetchTruckData()
       else if (table === 'access') fetchAccessData()
       else if (table === 'access_log') fetchAccessLogData()
+      else if (table === 'order') fetchOrderData()
+      else if (table === 'order_log') fetchOrderLogData()
+      else if (table === 'order_log') fetchOrderLogData()
     } catch (error: any) {
       setMessage({ type: 'error', text: 'Failed to delete: ' + error.message })
     } finally {
@@ -333,6 +424,18 @@ function Admin() {
           >
             Access Log
           </button>
+          <button 
+            className={activeTab === 'order' ? 'tab-btn active' : 'tab-btn'}
+            onClick={() => setActiveTab('order')}
+          >
+            Orders
+          </button>
+          <button 
+            className={activeTab === 'order_log' ? 'tab-btn active' : 'tab-btn'}
+            onClick={() => setActiveTab('order_log')}
+          >
+            Order Log
+          </button>
         </div>
 
         <div className="tab-content">
@@ -347,6 +450,17 @@ function Admin() {
                     value={newTruck.driverId}
                     onChange={(e) => setNewTruck({ ...newTruck, driverId: e.target.value.toUpperCase() })}
                     placeholder="ABC123"
+                    required
+                    className="form-input"
+                  />
+                </div>
+                <div className="form-group">
+                  <label>Driver Name:</label>
+                  <input
+                    type="text"
+                    value={newTruck.driverName}
+                    onChange={(e) => setNewTruck({ ...newTruck, driverName: e.target.value })}
+                    placeholder="Agus Saputra"
                     required
                     className="form-input"
                   />
@@ -381,6 +495,7 @@ function Admin() {
                       <tr>
                         <th>ID</th>
                         <th>Driver ID</th>
+                        <th>Driver Name</th>
                         <th>Plate Number</th>
                         <th>Actions</th>
                       </tr>
@@ -390,6 +505,7 @@ function Admin() {
                         <tr key={row.id}>
                           <td>{row.id}</td>
                           <td>{row.driver_id}</td>
+                          <td>{row.driver_name}</td>
                           <td>{row.plate_num}</td>
                           <td>
                             <button className="btn-edit" onClick={() => handleEdit('truck', row)}>Edit</button>
@@ -417,6 +533,7 @@ function Admin() {
                         <th>UID</th>
                         <th>Driver ID</th>
                         <th>Plate Number</th>
+                        <th>Pump</th>
                         <th>Actions</th>
                       </tr>
                     </thead>
@@ -426,6 +543,7 @@ function Admin() {
                           <td>{row.uid}</td>
                           <td>{row.driver_id}</td>
                           <td>{row.plate_num}</td>
+                          <td>{row.pump_id}</td>
                           <td>
                             <button className="btn-edit" onClick={() => handleEdit('access', row)}>Edit</button>
                             <button className="btn-delete" onClick={() => handleDelete('access', row.uid)}>Delete</button>
@@ -452,8 +570,8 @@ function Admin() {
                         <th>UID</th>
                         <th>Driver ID</th>
                         <th>Plate Number</th>
+                        <th>Pump</th>
                         <th>Timestamp</th>
-                        <th>Actions</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -462,11 +580,85 @@ function Admin() {
                           <td>{row.uid}</td>
                           <td>{row.driver_id}</td>
                           <td>{row.plate_num}</td>
+                          <td>{row.pump_id}</td>
+                          <td>{new Date(row.created_at).toLocaleString()}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+            </div>
+          )}
+
+          {activeTab === 'order' && (
+            <div className="table-view">
+              <h2>Orders</h2>
+              {loading ? (
+                <p>Loading...</p>
+              ) : (
+                <div className="table-wrapper">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Gas Type</th>
+                        <th>Quantity</th>
+                        <th>Driver ID</th>
+                        <th>Pump ID</th>
+                        <th>Created At</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {orderData.map((row) => (
+                        <tr key={row.id}>
+                          <td>{row.id}</td>
+                          <td>{row.gas_type}</td>
+                          <td>{row.quantity}</td>
+                          <td>{row.driver_id}</td>
+                          <td>{row.pump_id}</td>
                           <td>{new Date(row.created_at).toLocaleString()}</td>
                           <td>
-                            <button className="btn-edit" onClick={() => handleEdit('access_log', row)}>Edit</button>
-                            <button className="btn-delete" onClick={() => handleDelete('access_log', row.id)}>Delete</button>
+                            <button className="btn-edit" onClick={() => handleEdit('order', row)}>Edit</button>
+                            <button className="btn-delete" onClick={() => handleDelete('order', row.id)}>Delete</button>
                           </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+            </div>
+          )}
+
+          {activeTab === 'order_log' && (
+            <div className="table-view">
+              <h2>Order Log</h2>
+              {loading ? (
+                <p>Loading...</p>
+              ) : (
+                <div className="table-wrapper">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Gas Type</th>
+                        <th>Quantity</th>
+                        <th>Driver ID</th>
+                        <th>Pump ID</th>
+                        <th>Created At</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {orderLogData.map((row) => (
+                        <tr key={row.id}>
+                          <td>{row.id}</td>
+                          <td>{row.gas_type}</td>
+                          <td>{row.quantity}</td>
+                          <td>{row.driver_id}</td>
+                          <td>{row.pump_id}</td>
+                          <td>{new Date(row.created_at).toLocaleString()}</td>
                         </tr>
                       ))}
                     </tbody>
@@ -492,6 +684,16 @@ function Admin() {
                     onChange={(e) => setEditModal({ 
                       ...editModal, 
                       data: { ...editModal.data, driver_id: e.target.value.toUpperCase() } 
+                    })}
+                    className="form-input"
+                  />
+                  <label>Driver Name:</label>
+                  <input
+                    type="text"
+                    value={editModal.data.driver_name}
+                    onChange={(e) => setEditModal({ 
+                      ...editModal, 
+                      data: { ...editModal.data, driver_name: e.target.value } 
                     })}
                     className="form-input"
                   />
@@ -585,6 +787,102 @@ function Admin() {
                       ...editModal, 
                       data: { ...editModal.data, timestamp: new Date(e.target.value).toISOString() } 
                     })}
+                    className="form-input"
+                  />
+                </>
+              )}
+              {editModal.table === 'order' && (
+                <>
+                  <label>ID (Read-only):</label>
+                  <input
+                    type="text"
+                    value={editModal.data.id}
+                    disabled
+                    className="form-input"
+                  />
+                  <label>Gas Type:</label>
+                  <input
+                    type="text"
+                    value={editModal.data.gas_type}
+                    onChange={(e) => setEditModal({ 
+                      ...editModal, 
+                      data: { ...editModal.data, gas_type: e.target.value } 
+                    })}
+                    className="form-input"
+                  />
+                  <label>Quantity:</label>
+                  <input
+                    type="text"
+                    value={editModal.data.quantity}
+                    onChange={(e) => setEditModal({ 
+                      ...editModal, 
+                      data: { ...editModal.data, quantity: e.target.value } 
+                    })}
+                    className="form-input"
+                  />
+                  <label>Driver ID:</label>
+                  <input
+                    type="text"
+                    value={editModal.data.driver_id}
+                    onChange={(e) => setEditModal({ 
+                      ...editModal, 
+                      data: { ...editModal.data, driver_id: e.target.value.toUpperCase() } 
+                    })}
+                    className="form-input"
+                  />
+                  <label>Pump ID:</label>
+                  <input
+                    type="text"
+                    value={editModal.data.pump_id}
+                    onChange={(e) => setEditModal({ 
+                      ...editModal, 
+                      data: { ...editModal.data, pump_id: e.target.value } 
+                    })}
+                    className="form-input"
+                  />
+                  <label>Created At (Read-only):</label>
+                  <input
+                    type="text"
+                    value={new Date(editModal.data.created_at).toLocaleString()}
+                    disabled
+                    className="form-input"
+                  />
+                </>
+              )}
+              {editModal.table === 'order_log' && (
+                <>
+                  <label>ID (Read-only):</label>
+                  <input
+                    type="text"
+                    value={editModal.data.id}
+                    disabled
+                    className="form-input"
+                  />
+                  <label>Order ID:</label>
+                  <input
+                    type="number"
+                    value={editModal.data.order_id}
+                    onChange={(e) => setEditModal({ 
+                      ...editModal, 
+                      data: { ...editModal.data, order_id: parseInt(e.target.value) } 
+                    })}
+                    className="form-input"
+                  />
+                  <label>Status:</label>
+                  <input
+                    type="text"
+                    value={editModal.data.status}
+                    onChange={(e) => setEditModal({ 
+                      ...editModal, 
+                      data: { ...editModal.data, status: e.target.value } 
+                    })}
+                    className="form-input"
+                  />
+                  <label>Updated At (Read-only):</label>
+                  <input
+                    type="text"
+                    value={new Date(editModal.data.updated_at).toLocaleString()}
+                    disabled
                     className="form-input"
                   />
                 </>

@@ -22,7 +22,7 @@ function Scanner() {
   const mqttTopic = '/esp32/pump-switch'
   const mqttUrls = [
     `${window.location.protocol === 'https:' ? 'wss:' : 'ws:'}//${window.location.host}/mqtt/`,
-    `${window.location.protocol === 'https:' ? 'wss:' : 'ws:'}//${window.location.host}/mqtt-backup/`
+    `${window.location.protocol === 'https:' ? 'wss:' : 'ws:'}//${window.location.host}/mqtt-backu1p/`
   ]
   
   // Supabase configuration
@@ -226,7 +226,7 @@ function Scanner() {
 
       // Step 1: Fetch data from Access table using UID
       const accessResponse = await axios.get(
-        `${supabaseUrl}/rest/v1/access?uid=eq.${uid}&select=uid,driver_id,plate_num`,
+        `${supabaseUrl}/rest/v1/access?uid=eq.${uid}&select=uid,driver_id,plate_num,pump_id,status`,
         {
           headers: {
             'apikey': supabaseKey,
@@ -242,13 +242,30 @@ function Scanner() {
 
       const accessData = accessResponse.data[0]
 
-      // Step 2: Insert to access_log table
+      // Step 2: Update status to "Pumping" in access table
+      await axios.patch(
+        `${supabaseUrl}/rest/v1/access?uid=eq.${uid}`,
+        {
+          status: 'Done'
+        },
+        {
+          headers: {
+            'apikey': supabaseKey,
+            'Authorization': `Bearer ${supabaseKey}`,
+            'Content-Type': 'application/json'
+          }
+        }
+      )
+
+      // Step 3: Insert to access_log table
       await axios.post(
         `${supabaseUrl}/rest/v1/access_log`,
         {
           uid: accessData.uid,
           driver_id: accessData.driver_id,
           plate_num: accessData.plate_num,
+          pump_id: accessData.pump_id,
+          status: accessData.status,
           created_at: new Date().toISOString()
         },
         {
@@ -261,7 +278,7 @@ function Scanner() {
         }
       )
 
-      // Step 3: Delete from access table
+      // Step 5: Delete from access table
       await axios.delete(
         `${supabaseUrl}/rest/v1/access?uid=eq.${uid}`,
         {
@@ -272,7 +289,7 @@ function Scanner() {
         }
       )
 
-      // Step 4: Send to MQTT
+      // Step 6: Send to MQTT
       await sendToMQTT()
 
       setSuccess(`Access logged for ${accessData.plate_num} (${accessData.driver_id})`)

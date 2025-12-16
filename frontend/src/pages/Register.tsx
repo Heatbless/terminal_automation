@@ -1,12 +1,17 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import axios from 'axios'
 import QRCode from 'qrcode'
 import './Register.css'
 
 function Register() {
+  // ALL HOOKS MUST BE CALLED BEFORE ANY CONDITIONAL RETURNS
+  // Store pumpId in state to preserve it across renders
+  const [pumpId] = useState(() => sessionStorage.getItem('pumpId'))
+  console.log('Pump ID from sessionStorage:', pumpId)
   const [formData, setFormData] = useState({
     driverId: '',
-    plateNumber: ''
+    plateNumber: '',
+    gasType: 'Gasoline'
   })
   
   const [displayValues, setDisplayValues] = useState({
@@ -17,12 +22,50 @@ function Register() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [message, setMessage] = useState({ type: '', text: '' })
   const [qrCodeUrl, setQrCodeUrl] = useState('')
+  const [registrationDetails, setRegistrationDetails] = useState<{
+    driverId: string
+    driverName: string
+    plateNumber: string
+    gasType: string
+    pumpId: string
+  } | null>(null)
+  
+  // Clear pumpId from sessionStorage when component unmounts or on page visibility change
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        sessionStorage.removeItem('pumpId')
+      }
+    }
+    
+    document.addEventListener('visibilitychange', handleVisibilityChange)
+    
+    return () => {
+      sessionStorage.removeItem('pumpId')
+      document.removeEventListener('visibilitychange', handleVisibilityChange)
+    }
+  }, [])
+  
+  // Check if pumpId exists - user must visit /register/1 or /register/2 first
+  if (!pumpId) {
+    return (
+      <div className="register-container">
+        <div className="register-card">
+          <h1>Access Denied</h1>
+          <div className="message error">
+            Please access this page through the correct URL.
+          </div>
+        </div>
+      </div>
+    )
+  }
   
   // Supabase configuration
   const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
   const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY
   const supabaseTruckTable = 'truck'
   const supabaseAccessTable = 'access'
+  const supabaseOrderTable = 'truck_orders'
 
   const handleDriverIdChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let value = e.target.value.toUpperCase()
@@ -118,7 +161,7 @@ function Register() {
     try {
       // Step 1: Validate if driver_id and plate_num exist in Truck table
       const truckValidation = await axios.get(
-        `${supabaseUrl}/rest/v1/${supabaseTruckTable}?driver_id=eq.${formData.driverId}&plate_num=eq.${formData.plateNumber}&select=driver_id`,
+        `${supabaseUrl}/rest/v1/${supabaseTruckTable}?driver_id=eq.${formData.driverId}&plate_num=eq.${formData.plateNumber}&select=driver_id,driver_name`,
         {
           headers: {
             'apikey': supabaseKey,
@@ -135,6 +178,9 @@ function Register() {
         return
       }
       
+      // Get driver_name from truck validation
+      const driverName = truckValidation.data[0].driver_name || 'N/A'
+      
       // Step 2: Check if data already exists in Access table
       const checkResponse = await axios.get(
         `${supabaseUrl}/rest/v1/${supabaseAccessTable}?driver_id=eq.${formData.driverId}&plate_num=eq.${formData.plateNumber}&select=uid`,
@@ -150,31 +196,17 @@ function Register() {
       let uid: string
       
       if (checkResponse.data && checkResponse.data.length > 0) {
-        // Data already exists, use existing UID and show QR code only
+        // Data already exists, use existing UID
         uid = checkResponse.data[0].uid
-        
-        // Generate and download QR code
-        const qrDataUrl = await QRCode.toDataURL(uid)
-        
-        // Display QR code
-        setQrCodeUrl(qrDataUrl)
-        
-        // Download QR code
-        const link = document.createElement('a')
-        link.href = qrDataUrl
-        link.download = `${formData.plateNumber}_QR.png`
-        document.body.appendChild(link)
-        link.click()
-        document.body.removeChild(link)
-        
-        setMessage({ type: 'success', text: 'Already registered. QR code downloaded.' })
       } else {
         // Data doesn't exist, insert to Access table
         const insertResponse = await axios.post(
           `${supabaseUrl}/rest/v1/${supabaseAccessTable}`,
           {
             driver_id: formData.driverId,
-            plate_num: formData.plateNumber
+            plate_num: formData.plateNumber,
+            pump_id: pumpId,
+            status: 'registered'
           },
           {
             headers: {
@@ -192,7 +224,8 @@ function Register() {
         } else {
           // If not in response, fetch it
           const accessResponse = await axios.get(
-            `${supabaseUrl}/rest/v1/${supabaseAccessTable}?driver_id=eq.${formData.driverId}&plate_num=eq.${formData.plateNumber}&select=uid`,
+            `${supabaseUrl}/rest/v1/${supabaseAccessTable}?driver_id=eq.${formData.driverId}
+            &plate_num=eq.${formData.plateNumber}&select=driver_uid`,
             {
               headers: {
                 'apikey': supabaseKey,
@@ -203,26 +236,66 @@ function Register() {
           )
           uid = accessResponse.data[0].uid
         }
-        
-        // Generate and download QR code
-        const qrDataUrl = await QRCode.toDataURL(uid)
-        
-        // Display QR code
-        setQrCodeUrl(qrDataUrl)
-        
-        // Download QR code
-        const link = document.createElement('a')
-        link.href = qrDataUrl
-        link.download = `${formData.plateNumber}_QR.png`
-        document.body.appendChild(link)
-        link.click()
-        document.body.removeChild(link)
-        
-        setMessage({ type: 'success', text: 'Registration successful! QR code downloaded.' })
       }
       
+      // Step 3: Validate that driver_id and gas_type exist in Order table
+      const orderQueryUrl = `${supabaseUrl}/rest/v1/${supabaseOrderTable}?driver_id=eq.${formData.driverId}&gas_type=eq.${formData.gasType}&select=driver_id,gas_type,pump_id`
+      console.log('Full order validation URL:', orderQueryUrl)
+      console.log('Searching for - driver_id:', formData.driverId, 'gas_type:', formData.gasType)
+      
+      const orderValidation = await axios.get(orderQueryUrl, {
+        headers: {
+          'apikey': supabaseKey,
+          'Authorization': `Bearer ${supabaseKey}`,
+          'Content-Type': 'application/json'
+        }
+      })
+      
+      console.log('Order validation response:', orderValidation.data)
+      console.log('Number of records found:', orderValidation.data?.length || 0)
+      
+      // If driver_id and gas_type don't exist in Order table, deny access
+      if (!orderValidation.data || orderValidation.data.length === 0) {
+        setMessage({ 
+          type: 'error', 
+          text: `No order found for Driver ID: ${formData.driverId} with gas type: ${formData.gasType}. Please verify your fuel type selection.` 
+        })
+        setIsSubmitting(false)
+        return
+      }
+      
+      // All validations passed - Generate and download QR code
+      const qrDataUrl = await QRCode.toDataURL(uid)
+      
+      // Display QR code
+      setQrCodeUrl(qrDataUrl)
+      
+      // Download QR code
+      const link = document.createElement('a')
+      link.href = qrDataUrl
+      link.download = `${formData.plateNumber}_QR.png`
+      document.body.appendChild(link)
+      link.click()
+      document.body.removeChild(link)
+      
+      const isExistingRegistration = checkResponse.data && checkResponse.data.length > 0
+      setMessage({ 
+        type: 'success', 
+        text: isExistingRegistration 
+          ? 'Registration verified! All details confirmed. QR code downloaded.' 
+          : 'Registration successful! All details validated. QR code downloaded.' 
+      })
+      
+      setRegistrationDetails({
+        driverId: formData.driverId,
+        driverName: driverName,
+        plateNumber: formData.plateNumber,
+        gasType: formData.gasType,
+        pumpId: pumpId
+      })
+      
       // Clear form after successful submission
-      setFormData({ driverId: '', plateNumber: '' })
+      setFormData({ driverId: '', plateNumber: '', gasType: 'Gasoline' })
       setDisplayValues({ driverId: '', plateNumber: '' })
       
     } catch (error: any) {
@@ -237,7 +310,7 @@ function Register() {
   return (
     <div className="register-container">
       <div className="register-card">
-        <h1>Register</h1>
+        <h1>Register - Pump {pumpId}</h1>
         
         {message.text && (
           <div className={`message ${message.type}`}>
@@ -274,10 +347,37 @@ function Register() {
               maxLength={12}
             />
           </div>
+          <div className="form-group">
+            <label htmlFor="gasType">Gas Type:</label>
+            <select
+              id="gasType"
+              name="gasType"
+              value={formData.gasType}
+              onChange={(e) => setFormData({ ...formData, gasType: e.target.value })}
+              required
+              className="form-input"
+            >
+              <option value="Gasoline">Gasoline</option>
+              <option value="Solar">Solar</option>
+              <option value="Diesel">Diesel</option>
+            </select>
+          </div>
           <button type="submit" className="register-btn" disabled={isSubmitting}>
             {isSubmitting ? 'Registering...' : 'Register'}
           </button>
         </form>
+        
+        {registrationDetails && (
+          <div className="registration-details">
+            <br></br>
+            <h3>Registration Details</h3>
+            <p><strong>Driver ID:</strong> {registrationDetails.driverId}</p>
+            <p><strong>Driver Name:</strong> {registrationDetails.driverName}</p>
+            <p><strong>Plate Number:</strong> {registrationDetails.plateNumber}</p>
+            <p><strong>Gas Type:</strong> {registrationDetails.gasType}</p>
+            <p><strong>Pump ID:</strong> {registrationDetails.pumpId}</p>
+          </div>
+        )}
         
         {qrCodeUrl && (
           <div className="qr-code-section">

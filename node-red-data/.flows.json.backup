@@ -133,7 +133,7 @@
         "type": "function",
         "z": "99428a2c5c435136",
         "name": "function 1",
-        "func": "if (msg.payload && msg.payload.packet && msg.payload.packet.payload) {\n\n    // 2. Extract the Buffer from the deep structure\n    var rawBuffer = msg.payload.packet.payload;\n\n    // 3. Convert the Buffer to a clean String (e.g. \"on\")\n    var cleanString = rawBuffer.toString();\n\n    // 4. Update the message payload\n    msg.payload = cleanString;\n\n    // Return the cleaned message\n    return msg.payload;\n\n} else {\n    // If it's not a packet (e.g., client connection event), ignore it\n    return null;\n}",
+        "func": "if (msg.payload && msg.payload.packet && msg.payload.packet.payload) {\n\n    // 2. Extract the Buffer from the deep structure\n    var rawBuffer = msg.payload.packet.payload;\n\n    // 3. Convert the Buffer to a clean String (e.g. \"on\")\n    var cleanString = rawBuffer.toString();\n\n    // 4. Update the message payload\n    msg.payload = cleanString;\n\n    // Return the cleaned message\n    return msg;\n\n} else {\n    // If it's not a packet (e.g., client connection event), ignore it\n    return null;\n}",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
