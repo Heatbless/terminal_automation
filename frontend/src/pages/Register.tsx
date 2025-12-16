@@ -196,8 +196,23 @@ function Register() {
       let uid: string
       
       if (checkResponse.data && checkResponse.data.length > 0) {
-        // Data already exists, use existing UID
+        // Data already exists, update pump_id and use existing UID
         uid = checkResponse.data[0].uid
+        
+        // Update the pump_id for existing registration
+        await axios.patch(
+          `${supabaseUrl}/rest/v1/${supabaseAccessTable}?uid=eq.${uid}`,
+          {
+            pump_id: pumpId
+          },
+          {
+            headers: {
+              'apikey': supabaseKey,
+              'Authorization': `Bearer ${supabaseKey}`,
+              'Content-Type': 'application/json'
+            }
+          }
+        )
       } else {
         // Data doesn't exist, insert to Access table
         const insertResponse = await axios.post(
@@ -259,6 +274,17 @@ function Register() {
         setMessage({ 
           type: 'error', 
           text: `No order found for Driver ID: ${formData.driverId} with gas type: ${formData.gasType}. Please verify your fuel type selection.` 
+        })
+        setIsSubmitting(false)
+        return
+      }
+      
+      // Step 4: Validate that order pump_id matches current registration pump
+      const orderData = orderValidation.data[0]
+      if (String(orderData.pump_id) !== String(pumpId)) {
+        setMessage({ 
+          type: 'error', 
+          text: `Wrong pump! Your order is for Pump ${orderData.pump_id}, but you are registering at Pump ${pumpId}. Please go to the correct pump.` 
         })
         setIsSubmitting(false)
         return

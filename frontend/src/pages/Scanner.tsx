@@ -9,6 +9,7 @@ function Scanner() {
   const [error, setError] = useState('')
   const [success, setSuccess] = useState('')
   const [mqttConnected, setMqttConnected] = useState(false)
+  const [scannerPumpId, setScannerPumpId] = useState(() => localStorage.getItem('scannerPumpId') || '')
   const scannerRef = useRef<Html5Qrcode | null>(null)
   const [cameras, setCameras] = useState<any[]>([])
   const [selectedCamera, setSelectedCamera] = useState('')
@@ -242,7 +243,17 @@ function Scanner() {
 
       const accessData = accessResponse.data[0]
 
-      // Step 2: Update status to "Pumping" in access table
+      console.log('Scanner Pump ID:', scannerPumpId, 'Type:', typeof scannerPumpId)
+      console.log('Access Pump ID:', accessData.pump_id, 'Type:', typeof accessData.pump_id)
+      console.log('Match:', String(accessData.pump_id) === String(scannerPumpId))
+
+      // Step 2: Validate pump ID matches scanner pump ID
+      if (scannerPumpId && String(accessData.pump_id) !== String(scannerPumpId)) {
+        setError(`Wrong pump! This QR is for Pump ${accessData.pump_id}, but you are on Pump ${scannerPumpId}.`)
+        return
+      }
+
+      // Step 3: Update status to "Pumping" in access table
       await axios.patch(
         `${supabaseUrl}/rest/v1/access?uid=eq.${uid}`,
         {
@@ -303,6 +314,22 @@ function Scanner() {
   return (
     <div className="app-container">
       <h1>QR Code Scanner</h1>
+      
+      <div className="pump-selector">
+        <label htmlFor="pump-select">Scanner Pump ID:</label>
+        <select 
+          id="pump-select"
+          value={scannerPumpId} 
+          onChange={(e) => {
+            setScannerPumpId(e.target.value)
+            localStorage.setItem('scannerPumpId', e.target.value)
+          }}
+        >
+          <option value="">Select Pump</option>
+          <option value="1">Pump 1</option>
+          <option value="2">Pump 2</option>
+        </select>
+      </div>
       
       {mqttConnected ? (
         <div className="success-message">Connected</div>

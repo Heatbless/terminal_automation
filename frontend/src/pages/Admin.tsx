@@ -14,6 +14,7 @@ interface AccessRow {
   driver_id: string
   plate_num: string
   pump_id: string
+  status: string
 }
 
 interface AccessLogRow {
@@ -22,6 +23,7 @@ interface AccessLogRow {
   driver_id: string
   plate_num: string
   pump_id: string
+  status: string
   created_at: string
 }
 
@@ -44,7 +46,7 @@ interface OrderLogRow {
 }
 
 function Admin() {
-  const [activeTab, setActiveTab] = useState<'truck' | 'access' | 'access_log' | 'order' | 'order_log' | 'add'>('truck')
+  const [activeTab, setActiveTab] = useState<'truck' | 'access' | 'access_log' | 'order' | 'order_log' | 'add' | 'addOrder'>('truck')
   const [truckData, setTruckData] = useState<TruckRow[]>([])
   const [accessData, setAccessData] = useState<AccessRow[]>([])
   const [accessLogData, setAccessLogData] = useState<AccessLogRow[]>([])
@@ -58,6 +60,14 @@ function Admin() {
     driverId: '',
     driverName: '',
     plateNumber: '',
+  })
+  
+  // Form for adding new order
+  const [newOrder, setNewOrder] = useState({
+    gasType: 'Gasoline',
+    quantity: '',
+    driverId: '',
+    pumpId: '1'
   })
   
   // Edit modal state
@@ -83,6 +93,8 @@ function Admin() {
       fetchAccessLogData()
     } else if (activeTab === 'order') {
       fetchOrderData()
+    } else if (activeTab === 'addOrder') {
+      fetchTruckData() // Load truck data for driver dropdown
     } else if (activeTab === 'order_log') {
       fetchOrderLogData()
     }
@@ -152,7 +164,7 @@ function Admin() {
     setLoading(true)
     try {
       const response = await axios.get(
-        `${supabaseUrl}/rest/v1/order?select=*&order=created_at.desc`,
+        `${supabaseUrl}/rest/v1/truck_orders?select=*&order=created_at.desc`,
         {
           headers: {
             'apikey': supabaseKey,
@@ -238,6 +250,40 @@ function Admin() {
     }
   }
 
+  const handleAddOrder = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setLoading(true)
+    setMessage({ type: '', text: '' })
+
+    try {
+      await axios.post(
+        `${supabaseUrl}/rest/v1/truck_orders`,
+        {
+          gas_type: newOrder.gasType,
+          quantity: parseInt(newOrder.quantity),
+          driver_id: newOrder.driverId,
+          pump_id: newOrder.pumpId
+        },
+        {
+          headers: {
+            'apikey': supabaseKey,
+            'Authorization': `Bearer ${supabaseKey}`,
+            'Content-Type': 'application/json',
+            'Prefer': 'return=representation'
+          }
+        }
+      )
+      
+      setMessage({ type: 'success', text: 'Order added successfully!' })
+      setNewOrder({ gasType: 'Gasoline', quantity: '', driverId: '', pumpId: '1' })
+      fetchOrderData()
+    } catch (error: any) {
+      setMessage({ type: 'error', text: 'Failed to add order: ' + error.message })
+    } finally {
+      setLoading(false)
+    }
+  }
+
   const handleEdit = (table: 'truck' | 'access' | 'access_log' | 'order' | 'order_log', data: any) => {
     setEditModal({ show: true, table, data: { ...data } })
   }
@@ -303,7 +349,7 @@ function Admin() {
         updateData = { ...data }
         delete updateData.id
       } else if (table === 'order') {
-        endpoint = `${supabaseUrl}/rest/v1/order?id=eq.${data.id}`
+        endpoint = `${supabaseUrl}/rest/v1/truck_orders?id=eq.${data.id}`
         updateData = {
           gas_type: data.gas_type,
           quantity: data.quantity,
@@ -360,7 +406,7 @@ function Admin() {
       } else if (table === 'access_log') {
         endpoint = `${supabaseUrl}/rest/v1/access_log?id=eq.${id}`
       } else if (table === 'order') {
-        endpoint = `${supabaseUrl}/rest/v1/order?id=eq.${id}`
+        endpoint = `${supabaseUrl}/rest/v1/truck_orders?id=eq.${id}`
       } else if (table === 'order_log') {
         endpoint = `${supabaseUrl}/rest/v1/order_log?id=eq.${id}`
       }
@@ -405,6 +451,12 @@ function Admin() {
             onClick={() => setActiveTab('add')}
           >
             Add Truck
+          </button>
+          <button 
+            className={activeTab === 'addOrder' ? 'tab-btn active' : 'tab-btn'}
+            onClick={() => setActiveTab('addOrder')}
+          >
+            Add Order
           </button>
           <button 
             className={activeTab === 'truck' ? 'tab-btn active' : 'tab-btn'}
@@ -483,6 +535,70 @@ function Admin() {
             </div>
           )}
 
+          {activeTab === 'addOrder' && (
+            <div className="add-form">
+              <h2>Add New Order</h2>
+              <form onSubmit={handleAddOrder}>
+                <div className="form-group">
+                  <label>Gas Type:</label>
+                  <select
+                    value={newOrder.gasType}
+                    onChange={(e) => setNewOrder({ ...newOrder, gasType: e.target.value })}
+                    required
+                    className="form-input"
+                  >
+                    <option value="Gasoline">Gasoline</option>
+                    <option value="Diesel">Diesel</option>
+                    <option value="Solar">Solar</option>
+                  </select>
+                </div>
+                <div className="form-group">
+                  <label>Quantity:</label>
+                  <input
+                    type="number"
+                    value={newOrder.quantity}
+                    onChange={(e) => setNewOrder({ ...newOrder, quantity: e.target.value })}
+                    placeholder="100"
+                    required
+                    min="1"
+                    className="form-input"
+                  />
+                </div>
+                <div className="form-group">
+                  <label>Driver ID:</label>
+                  <select
+                    value={newOrder.driverId}
+                    onChange={(e) => setNewOrder({ ...newOrder, driverId: e.target.value })}
+                    required
+                    className="form-input"
+                  >
+                    <option value="">Select Driver</option>
+                    {truckData.map((truck) => (
+                      <option key={truck.id} value={truck.driver_id}>
+                        {truck.driver_id} - {truck.driver_name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div className="form-group">
+                  <label>Pump ID:</label>
+                  <select
+                    value={newOrder.pumpId}
+                    onChange={(e) => setNewOrder({ ...newOrder, pumpId: e.target.value })}
+                    required
+                    className="form-input"
+                  >
+                    <option value="1">Pump 1</option>
+                    <option value="2">Pump 2</option>
+                  </select>
+                </div>
+                <button type="submit" className="btn-primary" disabled={loading}>
+                  {loading ? 'Adding...' : 'Add Order'}
+                </button>
+              </form>
+            </div>
+          )}
+
           {activeTab === 'truck' && (
             <div className="table-view">
               <h2>Truck Table</h2>
@@ -534,6 +650,7 @@ function Admin() {
                         <th>Driver ID</th>
                         <th>Plate Number</th>
                         <th>Pump</th>
+                        <th>Status</th>
                         <th>Actions</th>
                       </tr>
                     </thead>
@@ -544,6 +661,7 @@ function Admin() {
                           <td>{row.driver_id}</td>
                           <td>{row.plate_num}</td>
                           <td>{row.pump_id}</td>
+                          <td>{row.status}</td>
                           <td>
                             <button className="btn-edit" onClick={() => handleEdit('access', row)}>Edit</button>
                             <button className="btn-delete" onClick={() => handleDelete('access', row.uid)}>Delete</button>
@@ -571,6 +689,7 @@ function Admin() {
                         <th>Driver ID</th>
                         <th>Plate Number</th>
                         <th>Pump</th>
+                        <th>Status</th>
                         <th>Timestamp</th>
                       </tr>
                     </thead>
@@ -581,6 +700,7 @@ function Admin() {
                           <td>{row.driver_id}</td>
                           <td>{row.plate_num}</td>
                           <td>{row.pump_id}</td>
+                          <td>{row.status}</td>
                           <td>{new Date(row.created_at).toLocaleString()}</td>
                         </tr>
                       ))}

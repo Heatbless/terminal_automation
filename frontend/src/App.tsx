@@ -33,6 +33,17 @@ function ClearPumpId() {
   return null
 }
 
+// 404 Not Found component
+function NotFound() {
+  return (
+    <div style={{ padding: '40px', textAlign: 'center', minHeight: '100vh', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+      <h1 style={{ fontSize: '72px', margin: '0' }}>404</h1>
+      <h2 style={{ fontSize: '24px', margin: '20px 0' }}>Page Not Found</h2>
+      <p style={{ fontSize: '16px', color: '#666' }}>The page you are looking for does not exist.</p>
+    </div>
+  )
+}
+
 function App() {
   return (
     <Router>
@@ -58,9 +69,10 @@ function App() {
         <Route path="/" element={
           <>
             <ClearPumpId />
-            <Navigate to="/register/1" replace />
+            <NotFound />
           </>
         } />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   )
