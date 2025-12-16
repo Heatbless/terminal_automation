@@ -63,12 +63,12 @@ From the root directory (`automation/`):
 
 **Windows (PowerShell/CMD):**
 ```bash
-docker compose up -d
+docker compose up -d --build
 ```
 
 **Linux:**
 ```bash
-docker compose up -d
+docker compose up -d --build
 ```
 
 This will start all services:
